@@ -1,6 +1,12 @@
 /* styles.css */
 
 /* General Styles */
+.container {
+  max-width: 1440px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 0 8px !important;
+}
 
 * {
   margin: 0;

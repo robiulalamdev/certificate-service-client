@@ -1,0 +1,113 @@
+/* reason to outsourse */
+
+.reason_to_outsource_banner_container {
+}
+
+.reason_to_outsource_title {
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 92.003px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+
+  background: var(
+    --grad,
+    linear-gradient(269deg, #20c9ff -1.16%, #008ede 95.79%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.reason_to_outsource_sub_title {
+  color: #001b33;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 49.353px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.reason_to_outsource_banner_container .outsource {
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 78.988px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 3.16px;
+}
+.reason_to_outsource_banner_container p {
+  color: #001b33;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 46.49px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.bottom_line_section {
+  max-width: 1074px;
+  min-height: 381px;
+  flex-shrink: 0;
+  margin: 0 auto;
+  margin: 32px auto !important;
+  border-radius: 31px;
+  background: #fff;
+  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+}
+
+.bottom_line_section h1 {
+  color: #0384cc;
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 42.863px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+.bottom_line_section p {
+  color: #001b33;
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 24.03px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150.5%; /* 36.165px */
+  text-transform: capitalize;
+}
+
+.click_here_to_register {
+  max-width: 533px;
+  min-height: 68px;
+  flex-shrink: 0;
+  border-radius: 3px;
+  background: linear-gradient(269deg, #20c9ff -23.46%, #008ede 95.62%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.click_here_to_register p {
+  color: #fff;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 18.613px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import HomePage from "../pages/Home/Home";
+import ReasonsToOutsource from "../pages/WhatIsCos/ReasonsToOutsource";
 
 export const routes = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ export const routes = createBrowserRouter([
       {
         path: "/home",
         element: <HomePage />,
+      },
+      {
+        path: "/reasons-to-outsource",
+        element: <ReasonsToOutsource />,
       },
     ],
   },

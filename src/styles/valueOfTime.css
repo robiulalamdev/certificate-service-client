@@ -1,0 +1,70 @@
+.value_of_time_banner h1 {
+  color: #0078ba;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 60.087px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 115%; /* 100.15px */
+  text-transform: uppercase;
+}
+
+.value_of_time_banner p {
+  color: #000;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 45px */
+  text-transform: capitalize;
+}
+
+.value_of_time_p {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.value_of_time_p p {
+  color: #000;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 45px */
+  text-transform: capitalize;
+}
+
+/* ------------- responsive media query ------------- */
+
+/* Styles for small devices (less than 600px) */
+@media only screen and (max-width: 600px) {
+  .value_of_time_banner img {
+    max-width: 350px;
+  }
+
+  .value_of_time_banner h1 {
+    font-size: 24px;
+  }
+  .value_of_time_banner p {
+    font-size: 18px;
+  }
+  .value_of_time_p p {
+    font-size: 18px;
+  }
+}
+
+/* Styles for medium devices (between 601px and 992px) */
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  /* Your styles for medium devices go here */
+}
+
+/* Styles for large devices (greater than 992px) */
+@media only screen and (min-width: 993px) {
+  /* Your styles for large devices go here */
+}

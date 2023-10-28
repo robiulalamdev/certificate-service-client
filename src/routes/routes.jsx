@@ -7,6 +7,7 @@ import CustomerService from "../pages/Home/HowItsWork/CustomerService";
 import MailSchedule from "../pages/WhatIsCos/MailSchedule";
 import BackStory from "../pages/BackStory/BackStory";
 import Pricing from "../pages/pricing/Pricing";
+import ValueOfTime from "../pages/ValueOfTime/ValueOfTime";
 
 export const routes = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ export const routes = createBrowserRouter([
       {
         path: "/pricing",
         element: <Pricing />,
+      },
+      {
+        path: "/value-of-time",
+        element: <ValueOfTime />,
       },
       {
         path: "/reasons-to-outsource",

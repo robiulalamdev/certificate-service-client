@@ -8,6 +8,7 @@ import MailSchedule from "../pages/WhatIsCos/MailSchedule";
 import BackStory from "../pages/BackStory/BackStory";
 import Pricing from "../pages/pricing/Pricing";
 import ValueOfTime from "../pages/ValueOfTime/ValueOfTime";
+import CreateAccount from "../pages/CreateAccount/CreateAccount";
 
 export const routes = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ export const routes = createBrowserRouter([
       {
         path: "/home",
         element: <HomePage />,
+      },
+      {
+        path: "/create-account",
+        element: <CreateAccount />,
       },
       {
         path: "/back-story",

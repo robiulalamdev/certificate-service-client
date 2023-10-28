@@ -1,0 +1,92 @@
+.back_story_banner h1 {
+  color: #001b33;
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 99.78px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 115%; /* 114.747px */
+  text-transform: uppercase;
+}
+
+.back_story_banner h2 {
+  color: #0384cc;
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 72.518px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 115%; /* 83.395px */
+  text-transform: uppercase;
+}
+.certificate_ceo_section {
+  margin: 100px 0;
+}
+.certificate_ceo_section p {
+  color: #000;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 193.5%; /* 50.31px */
+  text-transform: capitalize;
+}
+
+.back_story_p {
+  color: #000;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 193.5%; /* 50.31px */
+  text-transform: capitalize;
+}
+
+.back_story_p a {
+  color: #001b33;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 193.5%;
+  text-transform: capitalize;
+}
+
+/* ------------- responsive media query ------------- */
+
+/* Styles for small devices (less than 600px) */
+@media only screen and (max-width: 600px) {
+  .back_story_banner h1 {
+    font-size: 28px;
+  }
+
+  .back_story_banner h2 {
+    font-size: 24px;
+  }
+}
+
+/* Styles for medium devices (between 601px and 992px) */
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  .back_story_banner h1 {
+    font-size: 40px;
+  }
+
+  .back_story_banner h2 {
+    font-size: 30px;
+  }
+}
+
+/* Styles for large devices (greater than 992px) */
+@media only screen and (min-width: 993px) {
+  /* Your styles for large devices go here */
+}

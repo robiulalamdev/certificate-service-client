@@ -5,6 +5,7 @@ import ReasonsToOutsource from "../pages/WhatIsCos/ReasonsToOutsource";
 import DueProcess from "../pages/WhatIsCos/DueProcess";
 import CustomerService from "../pages/Home/HowItsWork/CustomerService";
 import MailSchedule from "../pages/WhatIsCos/MailSchedule";
+import BackStory from "../pages/BackStory/BackStory";
 
 export const routes = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ export const routes = createBrowserRouter([
       {
         path: "/home",
         element: <HomePage />,
+      },
+      {
+        path: "/back-story",
+        element: <BackStory />,
       },
       {
         path: "/reasons-to-outsource",

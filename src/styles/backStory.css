@@ -73,6 +73,13 @@
   .back_story_banner h2 {
     font-size: 24px;
   }
+  .certificate_ceo_section p {
+    font-size: 20px;
+  }
+  .back_story_p,
+  .back_story_p a {
+    font-size: 20px;
+  }
 }
 
 /* Styles for medium devices (between 601px and 992px) */

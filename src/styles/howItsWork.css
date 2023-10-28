@@ -1,0 +1,105 @@
+/* customer page styles */
+.customer_banner {
+  background-image: url("../assets/images//how-its-work-images/customer_banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  min-width: 100%;
+}
+
+.customer_banner h2 {
+  color: #20c9ff;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 48.595px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.customer_banner h1 {
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 73.419px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  letter-spacing: 2.937px;
+  text-transform: uppercase;
+
+  background: var(
+    --grad,
+    linear-gradient(269deg, #20c9ff -1.16%, #008ede 95.79%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ceo-container .image img {
+  max-width: 300px !important;
+  max-height: 300px;
+}
+
+.ceo-container .image img {
+  max-width: 350px !important;
+  max-height: 300px;
+}
+
+.ceo-container h1 {
+  color: #001b33;
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.ceo_container span {
+  color: #001b33;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.ceo-container p {
+  color: #000;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 146.5%; /* 35.16px */
+  text-transform: capitalize;
+}
+
+.ceo-container button {
+  width: 178px;
+  height: 60px;
+  flex-shrink: 0;
+  border-radius: 3px;
+  background: #0384cc;
+  border: none;
+
+  color: #fff;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 28.61px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 20px;
+}

@@ -1,0 +1,133 @@
+@media screen and (max-width: 1024px) {
+  .btn-success,
+  .custom {
+    white-space: nowrap;
+  }
+  .nav-link,
+  .btn-success {
+    font-size: 16px;
+  }
+  .logo-title {
+    font-size: 18px;
+  }
+  .logo-slogan {
+    font-size: 13px;
+  }
+  .hero__section {
+    margin: 50px 0 90px;
+  }
+  .hero-h2 {
+    font-size: 43px;
+    padding-bottom: 46px;
+  }
+  .footer__section {
+    padding: 20px 0 23px 0;
+  }
+  .footer-menu {
+    font-size: 18px;
+    padding: 80px 0 60px 0;
+  }
+  .footer-menu-info {
+    padding-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-h2 {
+    font-size: 40px;
+  }
+  .navbar {
+    --bs-navbar-toggler-focus-width: 0;
+  }
+  .navbar-toggler {
+    border: none;
+  }
+  .navbar-toggler-icon {
+    background-image: url(../images/menu.png) !important;
+  }
+  /* .dropdown-menu{
+        width: fit-content;
+    } */
+  .footer-menu {
+    font-size: 18px;
+    padding: 75px 0 55px 0;
+  }
+  .footer-menu-info {
+    padding-bottom: 40px;
+  }
+  .footer-privacy {
+    padding: 30px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .logo-name {
+    display: none;
+  }
+  .hero__section {
+    margin: 45px 0 0 0;
+  }
+  .hero-h2 {
+    font-size: 35px;
+    padding: 24px 0 32px 0;
+  }
+  .btn-success,
+  .custom {
+    width: 100%;
+  }
+
+  .vid-parent {
+    padding-bottom: 0;
+  }
+
+  .footer-menu,
+  .footer-menu-info a {
+    flex-direction: column;
+    align-items: start;
+    gap: 16px;
+  }
+  .footer-menu {
+    font-size: 16px;
+    padding: 48px 0 32px 0;
+    padding-left: 5px;
+  }
+  .footer-menu-info {
+    font-size: 14px;
+    padding-bottom: 32px;
+    align-items: start;
+    padding-left: 5px;
+  }
+  .button-parent {
+    flex-direction: column;
+    width: 100%;
+    gap: 14px;
+  }
+
+  .btn-parent {
+    padding-top: 0;
+  }
+  .custom-2 {
+    padding: 10px 53px;
+    margin: 32px 0 48px 0;
+  }
+  .btn-success {
+    font-size: 16px;
+  }
+  .footer__section {
+    padding: 0;
+  }
+  .footer-privacy {
+    font-size: 12px;
+    padding: 24px 0 28px 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .hero-h2 {
+    font-size: 32px;
+    padding-bottom: 40px;
+  }
+  .btn-success {
+    font-size: 16px;
+  }
+}

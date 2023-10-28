@@ -1,0 +1,46 @@
+/* styles.css */
+
+/* General Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+body {
+  background-color: #fff;
+}
+/* :root{
+    --white : #fff;
+} */
+.container {
+  max-width: 1420px;
+}
+
+/* General Styles End */

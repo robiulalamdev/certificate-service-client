@@ -1,0 +1,140 @@
+.navbar__section {
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.05);
+}
+.navbar {
+  /* height: 100px; */
+  background: #fff;
+}
+
+.navbar-brand,
+.nav-link {
+  color: #222222 !important;
+}
+.logo-name {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+}
+.logo-title {
+  color: #222;
+  font-size: 20px;
+  font-weight: 600;
+}
+.logo-slogan {
+  color: rgba(34, 34, 34, 0.7);
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.navbar-expand-lg .navbar-collapse {
+  gap: 20px;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: 10px;
+}
+.nav-link {
+  color: #222 !important;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.bs-btn-active-bg {
+  color: #fff;
+}
+.btn-success {
+  color: #222;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 5px;
+  border: 1px solid #09f;
+  background: #fff;
+  padding: 10px 20px;
+  --bs-btn-active-bg: #09f !important;
+  --bs-btn-active-border-color: #09f !important;
+}
+.btn-success:hover {
+  border: 1px solid #09f !important;
+  background-color: #09f !important;
+  color: #fff !important;
+}
+.button-parent {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.custom {
+  background-color: #09f;
+  color: #fff;
+}
+.custom:hover {
+  border: 1px solid #09f !important;
+  background: #fff !important;
+  color: #09f !important;
+}
+
+.hero__section {
+  margin: 100px 0 111px;
+}
+.hero-h2 {
+  color: #09f;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 160%;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 60px;
+}
+.vid-parent {
+  text-align: center;
+  padding-bottom: 120px;
+}
+.img-parent {
+  text-align: center;
+}
+.btn-parent {
+  text-align: center;
+  padding-top: 76px;
+}
+.custom-2 {
+  padding: 20px 38px;
+  font-size: 20px;
+}
+
+.footer__section {
+  background: #002843;
+}
+.footer-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 119px 0 60px 0;
+}
+.footer-menu-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* gap: 16px;  */
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  padding-bottom: 60px;
+}
+
+.footer-menu,
+.footer-menu-info a {
+  color: #fff;
+}
+.line {
+  color: rgba(255, 255, 255, 0.2);
+}
+.footer-privacy {
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  padding: 40px 0 55px 0;
+}

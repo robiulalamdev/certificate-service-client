@@ -111,3 +111,103 @@
   font-weight: 400;
   line-height: normal;
 }
+
+/* due process styles */
+.due_process_banner_container h2 {
+  color: #001b33;
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 78.445px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.due_process_banner_container h1 {
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 92.003px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-transform: uppercase;
+
+  background: var(
+    --grad,
+    linear-gradient(269deg, #20c9ff -1.16%, #008ede 95.79%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.due_process_banner_container .small_paragraph {
+  background: #eff5ff;
+  min-height: 101px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.due_process_banner_container .small_paragraph p {
+  color: #000;
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 146.5%; /* 32.23px */
+  text-transform: lowercase;
+  max-width: 1111px;
+}
+.due_process_banner_container .long_paragraph {
+  color: #000;
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 28.03px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 146.5%; /* 41.063px */
+  text-transform: capitalize;
+  max-width: 1111px;
+  margin: 0 auto;
+}
+.due_process_banner_container .long_paragraph p {
+  color: #000;
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 28.03px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 146.5%; /* 41.063px */
+  text-transform: capitalize;
+}
+
+.bankruptcy_section {
+  min-height: 365px;
+  flex-shrink: 0;
+
+  border-radius: 10px;
+  background: linear-gradient(269deg, #007bc1 -1.16%, #00b6ef 95.79%);
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.15);
+}
+
+.bankruptcy_section p {
+  color: #fff;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 146.5%; /* 35.16px */
+  text-transform: capitalize;
+}

@@ -1,10 +1,12 @@
-import banner from "../../assets/images/reason-outsourse/banner.png";
+import banner from "../../assets/images/what-is-cos-images/banner.png";
+import ThemeBreadCrumb from "../../components/commons/ThemeBreadCrumb";
 import "../../styles/whatiscos.css";
 import { Link } from "react-router-dom";
 
 const ReasonsToOutsource = () => {
   return (
     <div className="container mx-auto p-4">
+      <ThemeBreadCrumb routes="HOME / WHAT IS COS / REASONS TO OUTSOURCE" />
       <div className="d-flex flex-column flex-lg-row justify-content-lg-evenly align-items-center gap-5 mt-5 reason_to_outsource_banner_container">
         <img className="" src={banner} alt="" />
         <div className="me-5 text-center">

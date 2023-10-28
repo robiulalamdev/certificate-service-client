@@ -1,0 +1,163 @@
+.pricing_banner {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 5, 11, 0.123) 0%,
+      rgba(0, 5, 11, 0.164) 100%
+    ),
+    url("../assets/images/pricing-images/banner.png"),
+    lightgray 50% / cover no-repeat;
+  height: 430px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pricing_banner h1 {
+  color: #fff;
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 99.78px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 115%; /* 114.747px */
+  text-transform: uppercase;
+}
+
+.pricing_banner p {
+  color: #fff;
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 131.5%; /* 39.45px */
+  text-transform: capitalize;
+  max-width: 800px;
+}
+
+.all_inclusive_pricing_section {
+  margin: 50px 0;
+}
+
+.all_inclusive_pricing_section h1 {
+  color: #0078ba;
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 115%; /* 69px */
+  text-transform: uppercase;
+}
+
+.all_inclusive_pricing_section p {
+  color: #000;
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 131.5%; /* 39.45px */
+  text-transform: capitalize;
+  margin-top: 20px;
+}
+
+.see_example_section {
+  max-width: 1278px;
+  min-height: 610px;
+  flex-shrink: 0;
+  margin: 100px auto;
+
+  border-radius: 40px;
+  background: #f7f7f7;
+  box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.15);
+}
+
+.see_example_section h1 {
+  color: #0078ba;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 115%; /* 69px */
+  text-transform: uppercase;
+}
+.see_example_section p {
+  color: #000;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 131.5%; /* 39.45px */
+  text-transform: capitalize;
+}
+
+.see_example_section button {
+  width: 160px;
+  height: 59px;
+  flex-shrink: 0;
+  border-radius: 9px;
+  border: 2px solid var(--grad, #20c9ff);
+  background: #fff;
+
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 115%; /* 34.5px */
+}
+/* ------------- responsive media query ------------- */
+
+/* Styles for small devices (less than 600px) */
+@media only screen and (max-width: 600px) {
+  .pricing_banner h1 {
+    font-size: 40px;
+  }
+  .pricing_banner p {
+    font-size: 20px;
+  }
+
+  .all_inclusive_pricing_section h1 {
+    font-size: 25px;
+  }
+
+  .all_inclusive_pricing_section p {
+    font-size: 20px;
+  }
+  .see_example_section h1 {
+    font-size: 20px;
+  }
+  .see_example_section p {
+    font-size: 16px;
+  }
+  .see_example_section button {
+    width: 120px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+/* Styles for medium devices (between 601px and 992px) */
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  /* Your styles for medium devices go here */
+}
+
+/* Styles for large devices (greater than 992px) */
+@media only screen and (min-width: 993px) {
+  /* Your styles for large devices go here */
+}

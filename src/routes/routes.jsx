@@ -6,6 +6,7 @@ import DueProcess from "../pages/WhatIsCos/DueProcess";
 import CustomerService from "../pages/Home/HowItsWork/CustomerService";
 import MailSchedule from "../pages/WhatIsCos/MailSchedule";
 import BackStory from "../pages/BackStory/BackStory";
+import Pricing from "../pages/pricing/Pricing";
 
 export const routes = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ export const routes = createBrowserRouter([
       {
         path: "/back-story",
         element: <BackStory />,
+      },
+      {
+        path: "/pricing",
+        element: <Pricing />,
       },
       {
         path: "/reasons-to-outsource",

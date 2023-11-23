@@ -1,2 +1,225 @@
-.create_account_banner h1 {
+.ca_banner {
+  margin-top: 64px;
+}
+
+.ca_banner .ca_page_title {
+  color: #0078ba;
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 81.818px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 93.5%; /* 76.5px */
+  text-transform: uppercase;
+  max-width: 482.727px;
+  margin: 0 auto;
+}
+
+.ca_banner .ca_form_sub_title {
+  color: #001b33;
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 93.5%; /* 28.05px */
+  margin-top: 64px;
+}
+
+.ca_banner .ca_form_sub_title span {
+  color: #da170b;
+}
+
+.ca_banner .ca_description {
+  color: #000;
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 131.5%; /* 39.45px */
+  text-transform: capitalize;
+  max-width: 1176px;
+  margin: 29px auto 0 auto;
+}
+
+.ca_input_form_container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 46px auto 100px auto;
+}
+
+.ca_input_container {
+  margin-top: 30px;
+}
+
+.ca_input_container label {
+  color: #001b33;
+  font-family: Outfit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: block;
+  text-transform: uppercase;
+}
+.ca_input {
+  max-width: 1000px;
+  height: 47px;
+  border-radius: 5px;
+  border: 0.5px solid #000 !important;
+  background: #f7f7f7;
+  padding: 0 10px;
+}
+
+.ca_input:focus {
+  border: 0.5px solid #0078ba !important;
+}
+.ca_input:active {
+  border: 0.5px solid #0078ba !important;
+}
+
+.ca_input_form_container .next_btn {
+  color: #fff;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  width: 131px;
+  height: 52px;
+  flex-shrink: 0;
+  border-radius: 3px;
+  background: linear-gradient(269deg, #20c9ff -23.46%, #008ede 95.62%);
+  outline: none;
+  border: none;
+  margin: 0 auto;
+}
+
+.css-iikimt-control {
+  border-color: transparent !important;
+  outline-color: transparent !important;
+}
+
+.css-iikimt-control:focus {
+  border-color: transparent !important;
+  outline-color: transparent !important;
+}
+
+.ca_agre_input {
+  width: 35px;
+  height: 35px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  border: 0.5px solid #000;
+  background: #f7f7f7;
+}
+
+.ca_agre {
+  color: #001b33;
+  font-family: Outfit;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.cra_ac_btn {
+  color: #fff;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  max-width: 325px;
+  width: 100%;
+  height: 62px;
+  flex-shrink: 0;
+  border-radius: 3px;
+  background: linear-gradient(269deg, #20c9ff -23.46%, #008ede 95.62%);
+  outline: none !important;
+  border: none !important;
+}
+
+.clear_form_btn {
+  color: #fff;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  max-width: 202px;
+  width: 100%;
+  height: 62px;
+  flex-shrink: 0;
+  border-radius: 3px;
+  background: linear-gradient(269deg, #20c9ff -23.46%, #008ede 95.62%);
+  outline: none !important;
+  border: none !important;
+}
+.cra_ac_btn:focus {
+  outline: none !important;
+  border: none !important;
+}
+.clear_form_btn:focus {
+  outline: none !important;
+  border: none !important;
+}
+
+/* Styles for small devices (less than 600px) */
+@media only screen and (max-width: 600px) {
+  .ca_banner {
+    margin-top: 20px;
+  }
+  .ca_banner .ca_page_title {
+    font-size: 30px;
+  }
+  .ca_banner .ca_form_sub_title {
+    margin-top: 15px;
+    font-size: 16px;
+  }
+  .ca_banner .ca_description {
+    font-size: 16px;
+  }
+  .ca_input_container {
+    margin-top: 15px;
+  }
+  .ca_input_container label {
+    font-size: 16px;
+  }
+  .ca_agre_input {
+    width: 20px;
+    height: 20px;
+  }
+
+  .ca_agre {
+    font-size: 18px;
+  }
+  .clear_form_btn,
+  .cra_ac_btn {
+    font-size: 20px;
+    width: 100%;
+  }
+}
+
+/* Styles for medium devices (between 601px and 992px) */
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  /* Your styles for medium devices go here */
+}
+
+/* Styles for large devices (greater than 992px) */
+@media only screen and (min-width: 993px) {
+  /* Your styles for large devices go here */
 }

@@ -9,6 +9,10 @@ import BackStory from "../pages/BackStory/BackStory";
 import Pricing from "../pages/pricing/Pricing";
 import ValueOfTime from "../pages/ValueOfTime/ValueOfTime";
 import CreateAccount from "../pages/CreateAccount/CreateAccount";
+import Signup from "../pages/Signup/Signup";
+import Login from "../pages/Login/Login";
+import ForgotPassword from "../pages/ForgotPassword/ForgotPassword";
+import ResetPassword from "../pages/ResetPassword/ResetPassword";
 
 export const routes = createBrowserRouter([
   {
@@ -56,5 +60,21 @@ export const routes = createBrowserRouter([
         element: <CustomerService />,
       },
     ],
+  },
+  {
+    path: "/signup",
+    element: <Signup />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/forgot-password",
+    element: <ForgotPassword />,
+  },
+  {
+    path: "/reset-password",
+    element: <ResetPassword />,
   },
 ]);

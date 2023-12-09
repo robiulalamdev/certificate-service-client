@@ -1,8 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from "react";
+import React, { useState } from "react";
 import "../../styles/referralProgrammePolicy.css";
+import { Modal, ModalBody } from "reactstrap";
+import { iCloseMailModal } from "../../utiles/icons";
 
 const ReferralProgrammePolicy = () => {
+  const [openMailContent, setOpenMailContent] = useState(false);
+
+  const title = "<<your email address>>";
+  const firstName = "<<First Name>>,";
   return (
     <div className="container">
       <div className="referral_programme_policy_container">
@@ -229,10 +235,180 @@ const ReferralProgrammePolicy = () => {
           <div className="referral_form_btns">
             <button className="dc_btn">Send Referral</button>
             <button className="dc_btn">Clear form</button>
-            <button className="set_cookies_btn">Review The Mail Content</button>
+            <button
+              onClick={(e) => {
+                setOpenMailContent(!openMailContent);
+                e.preventDefault();
+              }}
+              className="set_cookies_btn"
+            >
+              Review The Mail Content
+            </button>
           </div>
         </form>
       </div>
+
+      <Modal
+        isOpen={openMailContent}
+        onClose={() => setOpenMailContent(false)}
+        className="review_mail_modal"
+      >
+        <div
+          onClick={() => setOpenMailContent(false)}
+          className=""
+          style={{
+            position: "absolute",
+            top: "-20px",
+            right: "-20px",
+            cursor: "pointer",
+          }}
+        >
+          {iCloseMailModal}
+        </div>
+        <div className="review_mail_modal">
+          <p className="email">{title}</p>
+
+          <div className="hr_div"></div>
+
+          <div className="mail_send_info_container">
+            <div style={{ maxWidth: "200px" }}>
+              <p>From:</p>
+              <p>Sent:</p>
+              <p>To:</p>
+              <p>Subject:</p>
+            </div>
+            <div>
+              <p>Your name @ Your Law Firm</p>
+              <p>Date and Time</p>
+              <p>Person you are referring us to</p>
+              <p>
+                Let me refer you to a great service I use for mailing my
+                documents
+              </p>
+            </div>
+          </div>
+
+          <p className="email" style={{ marginTop: "43px" }}>
+            {firstName}
+          </p>
+          <div className="mail_details_p_list">
+            <p>
+              I want to tell you about this great service I have been using to
+              mail all my legal documents and correspondence for my firm,
+              <strong> firmName</strong>.
+            </p>
+            <p>
+              I have been using CertificateofService.com for some time now and I
+              want to tell you how it has transformed my practice. No longer do
+              I have staff sitting around a table stuffing countless envelopes.
+              No longer do I have to buy boxes and boxes of paper, envelopes,
+              toner, or stamps. My life is better and I have more time to focus
+              on more meaningful tasks.
+            </p>
+
+            <p>
+              You know the value of your staff. Their time is not well spent by
+              stuffing envelopes. They did not go through all that education and
+              learning to perform an absolutely necessary, but menial task of
+              stuffing envelopes.
+            </p>
+
+            <p>
+              CertificateofService.com has taken this menial task and automated
+              it. We simply go to their website, log in, and upload our
+              documents along with our mailing list. If it is a bankruptcy case,
+              we just tell them to get the mailing list from the Court! We don't
+              need to any heavy lifting, they do it all for us. It takes us
+              about two minutes to upload a mailing project to them and then our
+              staff can concentrate on revenue generating tasks, rather than
+              revenue draining tasks (like stuffing envelopes).
+            </p>
+
+            <p>
+              About an hour later, we receive an email from them letting us know
+              that the mail is now on its way across the country. We also
+              receive a ready to file Certificate of Service that proves up the
+              mailing we had them do. My staff just files the .pdf Certificate
+              with the Court and that's it. The mailing is complete! What took
+              us hours, now takes only minutes. It is a huge time saver and they
+              do it for less than what it would cost me to do it in house.
+              CertificateofService.com is a lifesaver for my firm.
+            </p>
+
+            <p>
+              I was referred to them by another practitioner who turned me onto
+              them and I would like to return the favor. I know you are going to
+              benefit by using their service.
+            </p>
+
+            <p>
+              Their staff is amazing and the owners of the business are
+              bankruptcy practitioners themselves, Jay and Kathryn Jump. They
+              understand the importance of our documents as well as the need to
+              mail the same day we upload to them. If I upload a document to
+              them in the morning, I know it went out the same day. I know that
+              I can rely on them. That is priceless.
+            </p>
+
+            <p>
+              Best of all, they will defend their certificate if a creditor or
+              court ever contests service. That is a level of insurance and
+              reliability you just don't find in many of the businesses in our
+              practice area. They will also train your entire staff on how to
+              use the system, repeatedly, for as long as it takes.
+            </p>
+
+            <p>
+              I would very much appreciate it if you would give them a call to
+              learn more, or just go right ahead and sign up. They are an ala
+              carte service, you pay for only what you use. There are no
+              contracts to sign, no hidden fees, and they handle everything from
+              a single letter to one individual to a Chapter 11 Disclosure with
+              multiple class ballots to five thousand people. Heck, they even do
+              Certified Mail and put the tracking number right onto the
+              certificate!
+            </p>
+
+            <p>
+              I know you're going to love it. It solved the greatest problem I
+              didn't know I had. For years, I thought it was just normal to
+              stuff the mail in our own offices, but it was such a time drain
+              for our staff. Then I found this service and my staff is no longer
+              bogged down with this menial task. It works for me, I know it will
+              work for you as well. Thank you for taking a moment to read this.
+              I hope you will find all the advantages that I did by signing up
+              with CertificateofService.com.
+            </p>
+
+            <p>
+              Here are a couple of links which will help explain what they do.
+            </p>
+
+            <div>
+              <p>
+                http://www.certificateofservice.com/video/COS_Splash_Movie.mp4
+              </p>
+              <p>http://www.certificateofservice.com/video/envReview.mp4</p>
+              <p>
+                Thank you and good luck with your business! We all need to help
+                each other out!
+              </p>
+              <p>http://www.certificateofservice.com</p>
+            </div>
+          </div>
+
+          <div className="mail_footer_info">
+            <p>Your Name</p>
+            <p>FirmName</p>
+            <p>Address</p>
+            <p>
+              city <span>state</span> <zip></zip>
+            </p>
+            <p>phone</p>
+            <p>email</p>
+          </div>
+        </div>
+      </Modal>
     </div>
   );
 };

@@ -1,0 +1,130 @@
+.cost_estimate_title {
+  color: #0078ba;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 115%; /* 51.75px */
+  text-transform: uppercase;
+  margin-top: 99px;
+}
+
+.cost_estimate_container {
+  margin-top: 90px;
+}
+
+.cost_estimate_list_container h1 {
+  color: #001b33;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 115%; /* 34.5px */
+}
+
+.cost_estimate_list_container input {
+  width: 141px;
+  height: 47px;
+  border-radius: 5px;
+  border: 0.5px solid #000;
+  background: #f7f7f7;
+  padding: 0 10px;
+}
+
+.cost_estimate_list_container {
+  display: flex;
+  justify-content: space-between;
+  gap: 75px;
+  margin-top: 60px;
+}
+
+.cost_estimate_container {
+  max-width: 1200px;
+}
+.get_estimate_btn_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 103px;
+  margin-bottom: 99px;
+}
+
+.get_estimate_btn {
+  width: 257px;
+  height: 62px;
+  border-radius: 3px;
+  background: linear-gradient(269deg, #20c9ff -23.46%, #008ede 95.62%);
+  color: #fff;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border: none;
+}
+
+.get_estimate_btn_container p {
+  color: #001b33;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+
+/* Styles for small devices (less than 600px) */
+@media only screen and (max-width: 600px) {
+  .cost_estimate_title {
+    font-size: 32px;
+    margin-top: 52px;
+  }
+
+  .cost_estimate_container {
+    margin-top: 50px;
+  }
+
+  .cost_estimate_list_container h1 {
+    font-size: 22px;
+  }
+
+  .cost_estimate_list_container {
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 35px;
+  }
+
+  .get_estimate_btn_container {
+    gap: 15px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  .get_estimate_btn {
+    font-size: 20px;
+  }
+
+  .get_estimate_btn_container p {
+    font-size: 18px;
+  }
+}
+
+/* Styles for medium devices (between 601px and 992px) */
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  /* Your styles for medium devices go here */
+}
+
+/* Styles for large devices (greater than 992px) */
+@media only screen and (min-width: 993px) {
+  /* Your styles for large devices go here */
+}

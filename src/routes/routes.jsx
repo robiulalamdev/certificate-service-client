@@ -18,6 +18,7 @@ import ReferralProgramme from "../pages/ReferralProgramme/ReferralProgramme";
 import ReferralProgrammePolicy from "../pages/ReferralProgrammePolicy/ReferralProgrammePolicy";
 import UpdateCreditCard from "../pages/UpdateCreditCard/UpdateCreditCard";
 import PostalAcknowledgmentForm from "../pages/PostalAcknowledgmentForm/PostalAcknowledgmentForm";
+import CostEstimate from "../pages/CostEstimate/CostEstimate";
 
 export const routes = createBrowserRouter([
   {
@@ -83,6 +84,10 @@ export const routes = createBrowserRouter([
       {
         path: "/postal-acknowledgment-form",
         element: <PostalAcknowledgmentForm />,
+      },
+      {
+        path: "/cost-estimate",
+        element: <CostEstimate />,
       },
     ],
   },

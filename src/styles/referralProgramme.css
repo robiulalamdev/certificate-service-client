@@ -1,0 +1,294 @@
+.referral_programme_title {
+  max-width: 1229px;
+  margin: 0 auto;
+  color: #0078ba;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 115%; /* 51.75px */
+  text-transform: uppercase;
+  margin-top: 109px;
+}
+
+.referral_programme_form {
+  margin: 109px auto 0 auto;
+  max-width: 1065px;
+}
+
+.signature_block_title {
+  color: #0078ba;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 115%; /* 57.5px */
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 39px;
+}
+
+/* .signature_block_section {
+  margin-top: 39px;
+} */
+.email_contact_section {
+  margin-top: 80px;
+}
+
+.referral_programme_form .referral_input_container label {
+  color: #001b33;
+  font-family: Outfit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  display: block;
+}
+
+.referral_programme_form .referral_input_container {
+  width: 100%;
+}
+
+.referral_programme_form .referral_input_container input {
+  /* max-width: 486px; */
+  height: 47px;
+  border-radius: 5px;
+  border: 0.5px solid #000;
+  background: #f7f7f7;
+  width: 100% !important;
+  padding: 0 10px;
+}
+.referral_programme_form .referral_input_container input,
+select {
+  /* max-width: 486px; */
+  height: 47px;
+  border-radius: 5px;
+  border: 0.5px solid #000;
+  background: #f7f7f7;
+  width: 100% !important;
+  padding: 0 10px;
+}
+
+.referral_programme_form .referral_input_container input,
+select:focus {
+  outline: none !important;
+  cursor: pointer;
+}
+.referral_programme_form .referral_input_container input::placeholder,
+select {
+  color: #979ca5 !important;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.referral_programme_form .small_input {
+  max-width: 115px;
+}
+
+.check_box_container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.check_box_container input {
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+}
+.check_box_container label {
+  color: #001b33;
+  font-family: Outfit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.referral_inputs {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 28px;
+  row-gap: 30px;
+  margin: 0 auto;
+}
+.referral_inputs_1 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 28px;
+  row-gap: 30px;
+  margin: 0 auto;
+}
+
+.referral_form_btns {
+  margin-top: 64px;
+  display: flex;
+  gap: 15px;
+}
+.referral_form_btns .set_cookies_btn {
+  color: #0078ba;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  max-width: 425px;
+  width: 100%;
+  height: 62px;
+  border-radius: 3px;
+  border: 2px solid #0078ba;
+}
+.referral_form_btns .dc_btn {
+  color: #fff;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  width: 257px;
+  height: 62px;
+  border-radius: 3px;
+  background: linear-gradient(269deg, #20c9ff -23.46%, #008ede 95.62%);
+  border: none;
+}
+
+/* Styles for small devices (less than 600px) */
+@media only screen and (max-width: 600px) {
+  .referral_programme_title {
+    font-size: 25px;
+    margin-top: 80px;
+  }
+
+  .referral_programme_form {
+    margin: 80px auto 0 auto;
+  }
+
+  .signature_block_title {
+    font-size: 25px;
+    margin-bottom: 39px;
+  }
+
+  .email_contact_section {
+    margin-top: 45px;
+  }
+
+  .referral_programme_form .small_input {
+    max-width: 80px;
+  }
+
+  .check_box_container input {
+    width: 25px;
+    height: 25px;
+  }
+
+  .referral_inputs {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 15px !important;
+    row-gap: 20px;
+  }
+  .referral_inputs_1 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 28px;
+    row-gap: 20px;
+  }
+
+  .referral_form_btns {
+    margin-top: 44px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  .referral_form_btns .set_cookies_btn {
+    font-size: 20px;
+    width: 100%;
+    height: 62px;
+  }
+  .referral_form_btns .dc_btn {
+    font-size: 20px;
+    width: 257px;
+    height: 62px;
+  }
+}
+
+/* Styles for medium devices (between 601px and 992px) */
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  .referral_programme_title {
+    font-size: 25px;
+    margin-top: 80px;
+  }
+
+  .referral_programme_form {
+    margin: 80px auto 0 auto;
+  }
+
+  .signature_block_title {
+    font-size: 25px;
+    margin-bottom: 39px;
+  }
+
+  .email_contact_section {
+    margin-top: 45px;
+  }
+
+  .referral_programme_form .small_input {
+    max-width: 80px;
+  }
+
+  .check_box_container input {
+    width: 25px;
+    height: 25px;
+  }
+
+  .referral_inputs {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 15px !important;
+    row-gap: 20px;
+  }
+  .referral_inputs_1 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 28px;
+    row-gap: 20px;
+  }
+  .referral_form_btns {
+    margin-top: 44px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  .referral_form_btns .set_cookies_btn {
+    font-size: 20px;
+    width: 100%;
+    height: 62px;
+  }
+  .referral_form_btns .dc_btn {
+    font-size: 20px;
+    width: 257px;
+    height: 62px;
+  }
+}
+
+/* Styles for large devices (greater than 992px) */
+@media only screen and (min-width: 993px) {
+  /* Your styles for large devices go here */
+}

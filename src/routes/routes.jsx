@@ -20,6 +20,8 @@ import UpdateCreditCard from "../pages/UpdateCreditCard/UpdateCreditCard";
 import PostalAcknowledgmentForm from "../pages/PostalAcknowledgmentForm/PostalAcknowledgmentForm";
 import CostEstimate from "../pages/CostEstimate/CostEstimate";
 import StartMailing from "../pages/StartMailing/StartMailing";
+import DashboardLayout from "../layout/DashboardLayout";
+import Dashboard from "../pages/Dashboard/Dashboard";
 
 export const routes = createBrowserRouter([
   {
@@ -111,5 +113,15 @@ export const routes = createBrowserRouter([
   {
     path: "/reset-password",
     element: <ResetPassword />,
+  },
+  {
+    path: "/dashboard",
+    element: <DashboardLayout />,
+    children: [
+      {
+        path: "/dashboard",
+        element: <Dashboard />,
+      },
+    ],
   },
 ]);

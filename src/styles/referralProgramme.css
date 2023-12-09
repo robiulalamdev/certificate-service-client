@@ -227,6 +227,11 @@ select {
     width: 257px;
     height: 62px;
   }
+  .referral_programme_form .small_input {
+    max-width: 600px !important;
+    width: 100% !important;
+    min-width: 100% !important;
+  }
 }
 
 /* Styles for medium devices (between 601px and 992px) */

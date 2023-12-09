@@ -1,0 +1,77 @@
+.update_credit_card_title {
+  max-width: 575px;
+  margin: 142px auto 0 auto;
+  color: #0078ba;
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 81.818px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 93.5%; /* 76.5px */
+  text-transform: uppercase;
+}
+
+.update_credit_card_form_btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  color: #fff !important;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 40px;
+}
+.update_credit_card_form_btns .update_card_btn {
+  max-width: 325px;
+  height: 62px;
+  width: 100%;
+  border-radius: 3px;
+  background: linear-gradient(269deg, #20c9ff -23.46%, #008ede 95.62%);
+  gap: 20px;
+  color: #fff !important;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border: none;
+}
+.update_credit_card_form_btns .clear_form_btn {
+  max-width: 202px;
+  height: 62px;
+  width: 100%;
+  border-radius: 3px;
+  background: linear-gradient(269deg, #20c9ff -23.46%, #008ede 95.62%);
+}
+
+/* Styles for small devices (less than 600px) */
+@media only screen and (max-width: 600px) {
+  .update_credit_card_title {
+    margin: 70px auto 0 auto;
+    font-size: 35px;
+  }
+}
+
+/* Styles for medium devices (between 601px and 992px) */
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  .update_credit_card_title {
+    font-size: 58px;
+  }
+}
+
+/* Styles for large devices (greater than 992px) */
+@media only screen and (min-width: 993px) {
+  .col_span_2 {
+    grid-column: span 2 !important;
+  }
+}

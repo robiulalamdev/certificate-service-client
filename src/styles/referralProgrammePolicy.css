@@ -1,0 +1,97 @@
+.referral_programme_policy_container {
+  max-width: 1249px;
+  margin: 78px auto 145px auto;
+}
+
+.referral_programme_policy_title {
+  max-width: 782px;
+  margin-bottom: 36px;
+  color: #0078ba;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 115%; /* 57.5px */
+  text-transform: uppercase;
+  word-break: break-all;
+}
+
+.referral_programme_policy_list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.referral_programme_policy_list p {
+  color: #000;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 30px */
+  text-transform: capitalize;
+}
+
+.referral_programme_policy_section {
+  margin-top: 63px;
+}
+
+.have_practice {
+  color: #001b33;
+  font-family: Outfit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* Styles for small devices (less than 600px) */
+@media only screen and (max-width: 600px) {
+  .referral_programme_policy_container {
+    margin: 45px auto 80px auto;
+  }
+
+  .referral_programme_policy_title {
+    margin-bottom: 26px;
+    font-size: 32px;
+  }
+
+  .referral_programme_policy_list {
+    gap: 15px;
+  }
+  .referral_programme_policy_list p {
+    font-size: 18px;
+  }
+
+  .referral_programme_policy_section {
+    margin-top: 36px;
+  }
+
+  .have_practice {
+    font-size: 18px;
+  }
+}
+
+/* Styles for medium devices (between 601px and 992px) */
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  .referral_programme_policy_container {
+    margin: 58px auto 90px auto;
+  }
+
+  .referral_programme_policy_title {
+    margin-bottom: 36px;
+    font-size: 36px;
+  }
+
+  .referral_programme_policy_section {
+    margin-top: 50px;
+  }
+}
+
+/* Styles for large devices (greater than 992px) */
+@media only screen and (min-width: 993px) {
+  /* Your styles for large devices go here */
+}

@@ -15,6 +15,7 @@ import ForgotPassword from "../pages/ForgotPassword/ForgotPassword";
 import ResetPassword from "../pages/ResetPassword/ResetPassword";
 import Envelop from "../pages/Envelop/Envelop";
 import ReferralProgramme from "../pages/ReferralProgramme/ReferralProgramme";
+import ReferralProgrammePolicy from "../pages/ReferralProgrammePolicy/ReferralProgrammePolicy";
 
 export const routes = createBrowserRouter([
   {
@@ -68,6 +69,10 @@ export const routes = createBrowserRouter([
       {
         path: "/referral-programme",
         element: <ReferralProgramme />,
+      },
+      {
+        path: "/referral-programme-policy",
+        element: <ReferralProgrammePolicy />,
       },
     ],
   },

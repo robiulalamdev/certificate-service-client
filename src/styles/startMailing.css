@@ -1,0 +1,79 @@
+.start_mailing_container {
+  margin-top: 32px;
+  margin-bottom: 73px;
+}
+
+.start_mailing_btn_container {
+  margin-top: 76px;
+}
+.start_mailing_btn_container h1 {
+  color: #0078ba;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 115%; /* 23px */
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+.start_mailing_btn_container button {
+  width: fit-content;
+  padding: 0 10px;
+  height: 62px;
+  border-radius: 3px;
+  background: linear-gradient(269deg, #20c9ff -23.46%, #008ede 95.62%);
+  color: #fff;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border: none;
+}
+
+/* Styles for small devices (less than 600px) */
+@media only screen and (max-width: 600px) {
+  .start_mailing_container {
+    margin-top: 17px;
+    margin-bottom: 43px;
+  }
+
+  .start_mailing_btn_container {
+    margin-top: 46px;
+  }
+  .start_mailing_btn_container h1 {
+    font-size: 17px;
+    margin-bottom: 15px;
+  }
+  .start_mailing_btn_container button {
+    font-size: 20px;
+  }
+}
+
+/* Styles for medium devices (between 601px and 992px) */
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  .start_mailing_container {
+    margin-top: 17px;
+    margin-bottom: 43px;
+  }
+
+  .start_mailing_btn_container {
+    margin-top: 46px;
+  }
+  .start_mailing_btn_container h1 {
+    font-size: 17px;
+    margin-bottom: 15px;
+  }
+  .start_mailing_btn_container button {
+    font-size: 22px;
+  }
+}
+
+/* Styles for large devices (greater than 992px) */
+@media only screen and (min-width: 993px) {
+  /* Your styles for large devices go here */
+}

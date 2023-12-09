@@ -13,6 +13,7 @@ import Signup from "../pages/Signup/Signup";
 import Login from "../pages/Login/Login";
 import ForgotPassword from "../pages/ForgotPassword/ForgotPassword";
 import ResetPassword from "../pages/ResetPassword/ResetPassword";
+import Envelop from "../pages/Envelop/Envelop";
 
 export const routes = createBrowserRouter([
   {
@@ -58,6 +59,10 @@ export const routes = createBrowserRouter([
       {
         path: "/customer-service",
         element: <CustomerService />,
+      },
+      {
+        path: "/envelop",
+        element: <Envelop />,
       },
     ],
   },

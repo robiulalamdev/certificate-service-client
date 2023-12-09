@@ -83,6 +83,121 @@
   text-decoration-line: underline;
 }
 
+.cost_estimate_result_section {
+  margin-top: 99px;
+  margin-bottom: 120px;
+}
+.cost_estimate_result_section h1 {
+  color: #0078ba;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 115%; /* 51.75px */
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.cost_estimate_result_section p {
+  max-width: 1300px;
+  margin: 0 auto;
+  color: #001b33;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 115%; /* 34.5px */
+  margin-top: 39px;
+}
+
+.cost_estimate_result_table {
+  max-width: 1300px;
+  margin: 52px auto 0 auto;
+}
+
+.cost_estimate_result_table .single_table {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.cost_estimate_result_table .single_table h4 {
+  color: #001b33;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 115%; /* 34.5px */
+  text-align: left;
+  margin: 0;
+}
+
+.cost_estimate_result_table .single_table h6 {
+  color: #001b33;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 115%; /* 34.5px */
+  text-align: left;
+}
+
+.print_this_estimate_btn {
+  width: 317px;
+  height: 62px;
+  border-radius: 3px;
+  background: linear-gradient(269deg, #20c9ff -23.46%, #008ede 95.62%);
+  color: #fff;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border: none;
+  margin-top: 77px;
+}
+
+.user_agreement_modal {
+  max-width: 1278px;
+  width: 100%;
+  max-height: 1165px;
+  padding: 65px 54px;
+}
+
+.user_agreement_modal h6 {
+  color: #000;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 215%; /* 51.6px */
+}
+
+.user_agreement_modal p {
+  color: #000;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Outfit;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 215%; /* 51.6px */
+  margin-top: 25px;
+}
+
 /* Styles for small devices (less than 600px) */
 @media only screen and (max-width: 600px) {
   .cost_estimate_title {
@@ -117,11 +232,70 @@
   .get_estimate_btn_container p {
     font-size: 18px;
   }
+
+  .cost_estimate_result_section {
+    margin-top: 52px;
+    margin-bottom: 70px;
+  }
+  .cost_estimate_result_section h1 {
+    font-size: 32px;
+  }
+
+  .cost_estimate_result_section p {
+    font-size: 22px;
+    margin-top: 32px;
+  }
+
+  .cost_estimate_result_table {
+    margin: 42px auto 0 auto;
+  }
+
+  .cost_estimate_result_table .single_table {
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 30px;
+  }
+
+  .cost_estimate_result_table .single_table h4 {
+    font-size: 22px;
+  }
+
+  .cost_estimate_result_table .single_table h6 {
+    font-size: 22px;
+  }
+
+  .print_this_estimate_btn {
+    font-size: 22px;
+    margin-top: 52px;
+  }
+
+  .user_agreement_modal {
+    padding: 20px 15px;
+  }
+
+  .user_agreement_modal h6 {
+    font-size: 20px;
+  }
+
+  .user_agreement_modal p {
+    font-size: 18px;
+    margin-top: 20px;
+  }
 }
 
 /* Styles for medium devices (between 601px and 992px) */
 @media only screen and (min-width: 601px) and (max-width: 992px) {
-  /* Your styles for medium devices go here */
+  .user_agreement_modal {
+    padding: 20px 15px;
+  }
+
+  .user_agreement_modal h6 {
+    font-size: 20px;
+  }
+
+  .user_agreement_modal p {
+    font-size: 18px;
+    margin-top: 20px;
+  }
 }
 
 /* Styles for large devices (greater than 992px) */

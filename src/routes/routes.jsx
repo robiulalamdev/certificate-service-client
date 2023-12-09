@@ -17,6 +17,7 @@ import Envelop from "../pages/Envelop/Envelop";
 import ReferralProgramme from "../pages/ReferralProgramme/ReferralProgramme";
 import ReferralProgrammePolicy from "../pages/ReferralProgrammePolicy/ReferralProgrammePolicy";
 import UpdateCreditCard from "../pages/UpdateCreditCard/UpdateCreditCard";
+import PostalAcknowledgmentForm from "../pages/PostalAcknowledgmentForm/PostalAcknowledgmentForm";
 
 export const routes = createBrowserRouter([
   {
@@ -78,6 +79,10 @@ export const routes = createBrowserRouter([
       {
         path: "/update-credit-card",
         element: <UpdateCreditCard />,
+      },
+      {
+        path: "/postal-acknowledgment-form",
+        element: <PostalAcknowledgmentForm />,
       },
     ],
   },

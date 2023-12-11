@@ -138,3 +138,63 @@
   line-height: 26px;
   padding: 40px 0 55px 0;
 }
+
+.menu_btn {
+  position: absolute;
+  left: 0;
+  top: 100px;
+  width: 70px;
+  border: 2px solid #09f;
+}
+.menu_btn svg {
+  width: 35px;
+  color: #09f;
+}
+
+.overview_second_half {
+  display: none;
+}
+
+/* Styles for small devices (less than 600px) */
+@media only screen and (max-width: 600px) {
+  .menu_btn {
+    display: block;
+  }
+  .sidebar {
+    display: none;
+  }
+}
+
+/* Styles for medium devices (between 601px and 992px) */
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  .menu_btn {
+    display: none;
+  }
+  .sidebar {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1370px) {
+  .menu_btn {
+    display: block;
+  }
+  .sidebar {
+    display: none !important;
+  }
+}
+
+/* Styles for large devices (greater than 992px) */
+@media only screen and (min-width: 993px) {
+  .overview_second_half {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1371px) {
+  .menu_btn {
+    display: none;
+  }
+  .sidebar {
+    display: block;
+  }
+}

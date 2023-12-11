@@ -21,7 +21,7 @@ import PostalAcknowledgmentForm from "../pages/PostalAcknowledgmentForm/PostalAc
 import CostEstimate from "../pages/CostEstimate/CostEstimate";
 import StartMailing from "../pages/StartMailing/StartMailing";
 import DashboardLayout from "../layout/DashboardLayout";
-import Dashboard from "../pages/Dashboard/Dashboard";
+import DOverview from "../pages/Dashboard/DOverview";
 
 export const routes = createBrowserRouter([
   {
@@ -119,8 +119,8 @@ export const routes = createBrowserRouter([
     element: <DashboardLayout />,
     children: [
       {
-        path: "/dashboard",
-        element: <Dashboard />,
+        path: "/dashboard/overview",
+        element: <DOverview />,
       },
     ],
   },

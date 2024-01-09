@@ -1,0 +1,229 @@
+.dashboard_setting {
+  width: 100%;
+  min-height: 100%;
+  border-radius: 40px;
+  background: #fff;
+  box-shadow: 0px 9.648px 19.296px 0px rgba(194, 194, 194, 0.16),
+    0px 0px 28.944px 0px rgba(170, 170, 170, 0.16);
+  padding: 23px;
+}
+
+/* setting tab btn */
+.setting_tab_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  margin-top: 103px;
+}
+.setting_tab_btn {
+  color: #717b8c;
+  font-family: Manrope;
+  font-size: 19.296px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  background-color: transparent;
+  width: 179.155px;
+  height: 40px;
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 3px solid #717b8c;
+}
+.setting_tab_active {
+  color: #0078ba;
+  font-family: Manrope;
+  font-size: 19.296px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  width: 179.155px;
+  height: 40px;
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 3px solid #0078ba;
+}
+.ypp_title {
+  color: #4c535f;
+  font-family: Manrope;
+  font-size: 15.437px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 28px;
+}
+
+.accountImgUpload_container {
+  width: 125.423px;
+  height: 127.352px;
+  flex-shrink: 0;
+  border-radius: 17.366px;
+  border: 0.965px dashed #4c535f;
+  background: #edf2f6;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10.84px;
+}
+
+.accountImgUpload_container p {
+  color: #4c535f;
+  text-align: center;
+  font-family: Manrope;
+  font-size: 11.577px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.setting_hr {
+  width: 100%;
+  height: 1.93px;
+  background: #e0e4ec;
+  margin-top: 39px;
+}
+
+.account_setting_form_container {
+  /* width: fit-content; */
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 24.12px;
+  row-gap: 23.16px;
+}
+
+.account_setting_input_container {
+  width: 100%;
+}
+
+.account_setting_input_container label {
+  color: #4c535f;
+  font-family: Manrope;
+  font-size: 15.437px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 112.4%; /* 17.351px */
+  display: block;
+}
+.account_setting_input_container input {
+  /* max-width: 500.725px; */
+  width: 100%;
+  height: 50.169px;
+  border-radius: 7.718px;
+  border: 0.965px solid #e0e4ec;
+  background: linear-gradient(0deg, #edf2f6 0%, #edf2f6 100%), #fff;
+  outline: none;
+  color: #8d98aa;
+  font-family: Manrope;
+  font-size: 13.507px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 112.4%; /* 15.182px */
+  padding: 0 14px;
+  margin-top: 10.98px;
+}
+
+.update_profile_btns_container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-top: 40px;
+}
+.update_profile_btn {
+  width: 193.923px;
+  height: 47.275px;
+  flex-shrink: 0;
+  border-radius: 7.718px;
+  background: #0078ba;
+  color: #fff;
+  font-family: Manrope;
+  font-size: 17.366px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border: none;
+  outline: none;
+}
+
+.update_profile_reset_btn {
+  color: #4c535f;
+  font-family: Manrope;
+  font-size: 17.366px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.accouont_setting_phone_select {
+  width: 100%;
+  height: 50.169px;
+  border-radius: 7.718px;
+  border-left: 0.965px solid #e0e4ec;
+  border-top: 0.965px solid #e0e4ec;
+  border-bottom: 0.965px solid #e0e4ec;
+  background: linear-gradient(0deg, #edf2f6 0%, #edf2f6 100%), #fff;
+  outline: none;
+  color: #8d98aa;
+  font-family: Manrope;
+  font-size: 13.507px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 112.4%; /* 15.182px */
+  padding: 0 14px;
+  margin-top: 10.98px;
+}
+
+/* Styles for small devices (less than 600px) */
+@media only screen and (max-width: 600px) {
+  .dashboard_setting {
+    width: 100%;
+    min-height: 100%;
+    border-radius: 0px;
+    background: #fff;
+    box-shadow: 0px;
+    padding: 10px;
+  }
+  .account_setting_form_container {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 24.12px;
+    row-gap: 23.16px;
+  }
+  .setting_tab_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin-top: 13px;
+  }
+  .setting_tab_btn {
+    color: #717b8c;
+    font-family: Manrope;
+    font-size: 14.296px;
+  }
+  .setting_tab_active {
+    color: #0078ba;
+    font-family: Manrope;
+    font-size: 14.296px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+
+/* Styles for medium devices (between 601px and 992px) */
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  /* Your styles for medium devices go here */
+}
+
+/* Styles for large devices (greater than 992px) */
+@media only screen and (min-width: 993px) {
+  /* Your styles for large devices go here */
+}

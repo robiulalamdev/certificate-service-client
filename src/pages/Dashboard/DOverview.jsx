@@ -4,6 +4,7 @@ import "../../styles/dashboard/dashboard.css";
 import "../../styles/dashboard/dOverview.css";
 import OverviewNotifyUser from "../../components/dashboard-ui/overview-ui/OverviewNotifyUser";
 import { iJob1, iJob2, iJob3 } from "../../utiles/icons";
+import { Link } from "react-router-dom";
 
 const t1 = "<Number for their job>";
 const fromInvoice = "<Data from invoice>";
@@ -17,7 +18,9 @@ const DOverview = () => {
             <h1>WELCOME</h1>
             <p>Welcome back, Murad!</p>
           </div>
-          <button>Start Mailing</button>
+          <Link to="/start-mailing">
+            <button>Start Mailing</button>
+          </Link>
         </div>
         <div className="announcements_container">
           <div className="announcements_header">

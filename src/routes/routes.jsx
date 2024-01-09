@@ -22,6 +22,7 @@ import CostEstimate from "../pages/CostEstimate/CostEstimate";
 import StartMailing from "../pages/StartMailing/StartMailing";
 import DashboardLayout from "../layout/DashboardLayout";
 import DOverview from "../pages/Dashboard/DOverview";
+import DSettings from "../pages/Dashboard/DSettings";
 
 export const routes = createBrowserRouter([
   {
@@ -121,6 +122,10 @@ export const routes = createBrowserRouter([
       {
         path: "/dashboard/overview",
         element: <DOverview />,
+      },
+      {
+        path: "/dashboard/settings",
+        element: <DSettings />,
       },
     ],
   },

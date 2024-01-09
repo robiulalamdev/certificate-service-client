@@ -54,7 +54,7 @@ const routes = [
   {
     id: 8,
     name: "Settings",
-    url: "settings",
+    url: "dashboard/settings",
     icon: iSetting,
   },
 ];

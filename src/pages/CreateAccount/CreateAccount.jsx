@@ -9,7 +9,7 @@ import AboutUsInfoForm from "../../components/create-account-ui/AboutUsInfoForm"
 import { Link } from "react-router-dom";
 
 const CreateAccount = () => {
-  const [formStep, setFormStep] = useState(7);
+  const [formStep, setFormStep] = useState(1);
   const [agre, setAgre] = useState(false);
   return (
     <div className="container">

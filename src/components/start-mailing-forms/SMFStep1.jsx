@@ -15,12 +15,12 @@ const SMFStep1 = () => {
         EFFECTIVE 3/15/2023: YOU ARE RESPONSIBLE FOR GENERATING YOUR OWN
         CERTIFICATE OF SERVICE PURSUANT TO LOCAL RULES!!!
       </h1>
-      <SelectDropdown
+      {/* <SelectDropdown
         selected={district}
         setSelected={setDistrict}
         items={["CALIFORNIA"]}
         className="smf_dropdown_btn"
-      />
+      /> */}
 
       <div className="smf1_tell_about">
         <h1>

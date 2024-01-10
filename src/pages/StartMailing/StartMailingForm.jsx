@@ -2,32 +2,37 @@ import React, { useState } from "react";
 import SMFStep1 from "../../components/start-mailing-forms/SMFStep1";
 import "../../styles/startMailingForm.css";
 import SMFStep2 from "../../components/start-mailing-forms/SMFStep2";
+import SMFStep3 from "../../components/start-mailing-forms/SMFStep3";
+import SMFStep4 from "../../components/start-mailing-forms/SMFStep4";
 
 const StartMailingForm = () => {
-  const [step, setStep] = useState(1);
+  // const [step, setStep] = useState(1);
   return (
     <div className="container mx-auto pb-5" style={{ minHeight: "100vh" }}>
-      {step > 1 && (
+      {/* {step > 1 && (
         <div
           className="d-flex justify-content-end"
           style={{ marginTop: "37px" }}
         >
           <div className="smf1_cancel_upload_btn">Cancel Upload</div>
         </div>
-      )}
+      )} */}
       <form>
-        {step === 1 && <SMFStep1 />}
-        {step === 2 && <SMFStep2 />}
+        <SMFStep1 />
+        <SMFStep2 />
+        <SMFStep3 />
+        <SMFStep4 />
       </form>
 
       <div className="d-flex align-items-center justify-content-center w-100">
-        {step === 11 ? (
+        <button className="smf_btn">Submit</button>
+        {/* {step === 11 ? (
           <button className="smf_btn">Submit</button>
         ) : (
           <div onClick={() => setStep(step + 1)} className="smf_btn">
             Next
           </div>
-        )}
+        )} */}
       </div>
     </div>
   );

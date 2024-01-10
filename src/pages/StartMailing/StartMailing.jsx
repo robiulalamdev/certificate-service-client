@@ -1,7 +1,6 @@
-import React from "react";
 import { iLeft_array } from "../../utiles/icons";
 import "../../styles/startMailing.css";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const StartMailing = () => {
   const navigate = useNavigate();
@@ -11,7 +10,9 @@ const StartMailing = () => {
 
       <div className="start_mailing_btn_container">
         <h1>JURISDICTION SPECIFIC</h1>
-        <button>EASTERN DIST. CALIFORNIA - BK</button>
+        <Link to="/start-mailing/eastern-dist-california-bk">
+          <button>EASTERN DIST. CALIFORNIA - BK</button>
+        </Link>
       </div>
 
       <div className="start_mailing_btn_container">

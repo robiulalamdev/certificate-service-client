@@ -23,6 +23,7 @@ import StartMailing from "../pages/StartMailing/StartMailing";
 import DashboardLayout from "../layout/DashboardLayout";
 import DOverview from "../pages/Dashboard/DOverview";
 import DSettings from "../pages/Dashboard/DSettings";
+import StartMailingForm from "../pages/StartMailing/StartMailingForm";
 
 export const routes = createBrowserRouter([
   {
@@ -74,11 +75,11 @@ export const routes = createBrowserRouter([
         element: <Envelop />,
       },
       {
-        path: "/referral-programme",
+        path: "/referral-program",
         element: <ReferralProgramme />,
       },
       {
-        path: "/referral-programme-policy",
+        path: "/referral-program-policy",
         element: <ReferralProgrammePolicy />,
       },
       {
@@ -90,12 +91,16 @@ export const routes = createBrowserRouter([
         element: <PostalAcknowledgmentForm />,
       },
       {
-        path: "/cost-estimate",
+        path: "/get-estimate",
         element: <CostEstimate />,
       },
       {
         path: "/start-mailing",
         element: <StartMailing />,
+      },
+      {
+        path: "/start-mailing/:slug",
+        element: <StartMailingForm />,
       },
     ],
   },

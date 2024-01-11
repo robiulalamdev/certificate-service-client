@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import "../../styles/backStory.css";
 import ceo from "../../assets/images/back-story-images/certificate-ceo.png";
 
@@ -14,7 +15,7 @@ const BackStory = () => {
         </h2>
       </div>
 
-      <div className="certificate_ceo_section d-flex flex-column flex-lg-row justify-content-around gap-5 align-items-center">
+      <div className="certificate_ceo_section flex flex-col lg:flex-row justify-around gap-5 items-center">
         <img className="" style={{ maxWidth: "350px" }} src={ceo} alt="" />
         <div>
           <p>

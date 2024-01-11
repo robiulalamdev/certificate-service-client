@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 const ValueOfTime = () => {
   return (
     <div className="container">
-      <div className="value_of_time_banner row align-items-center my-5">
-        <img className="col-lg-4 mx-auto" src={banner} alt="" />
-        <div className="col-lg-8 text-center text-md-start">
+      <div className="value_of_time_banner grid lg:grid-cols-12 items-center my-5">
+        <img className="lg:col-span-4 mx-auto" src={banner} alt="" />
+        <div className="lg:col-span-8 text-center md:text-left">
           <h1>
             THE VALUE OF <br /> YOUR TIME
           </h1>

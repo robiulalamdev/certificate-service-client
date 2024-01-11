@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import ThemeBreadCrumb from "../../components/commons/ThemeBreadCrumb";
 import "../../styles/whatiscos.css";
 import img1 from "../../assets/images/what-is-cos-images/pre-noon.png";
@@ -8,9 +9,9 @@ const MailSchedule = () => {
   return (
     <div>
       <ThemeBreadCrumb routes="HOME / WHAT IS COS / MAIL SCHEDULE" />
-      <section className="mail_schedule_banner ">
-        <div className="row container mx-auto p-2 text-center text-md-start">
-          <div className="col-lg-6">
+      <section className="mail_schedule_banner px-2 !py-[66px]">
+        <div className="grid lg:grid-cols-2 container mx-auto text-center text-md-start">
+          <div className="">
             <h1>
               We are on a <br />
               <span>tight schedule...</span>
@@ -20,7 +21,7 @@ const MailSchedule = () => {
               <span>moment to lose...</span>
             </h1>
           </div>
-          <div className="col-lg-6 mt-4 mt-lg-0">
+          <div className=" mt-4 lg:mt-0">
             <p>
               We are an ala carte service delivering same day mailing services
               if you get your uploaded documents to us prior to noon Pacific
@@ -33,12 +34,12 @@ const MailSchedule = () => {
         </div>
       </section>
 
-      <section className="container my-5">
-        <div className="mail_schedule_2nd_section d-flex flex-column justify-content-center align-items-center gap-5 mt-4">
-          <img className="w-100" src={img1} alt="" />
-          <img className="w-100 mt-5" src={img2} alt="" />
+      <section className="container mt-[80px] mb-14">
+        <div className="mail_schedule_2nd_section flex flex-col justify-center items-center gap-5 !pt-4">
+          <img className="w-full" src={img1} alt="" />
+          <img className="w-full mt-5" src={img2} alt="" />
         </div>
-        <div className="mail_schedule_2nd_section">
+        <div className="mail_schedule_2nd_section pt-[80px]">
           <p>
             * Saturday, Sunday, and all Federal Holidays are NOT business days.
             We are closed on any day that the Federal Courts are closed and/or
@@ -47,7 +48,7 @@ const MailSchedule = () => {
         </div>
 
         <Link to="/">
-          <div className="click_here_to_register mx-auto my-5">
+          <div className="click_here_to_register mx-auto mt-[80px] ">
             <p>Click here to register now and get a free account today!</p>
           </div>
         </Link>

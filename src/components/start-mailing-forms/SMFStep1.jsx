@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import SelectDropdown from "../commons/SelectDropdown";
 import { iInfo } from "../../utiles/icons";
-import { PopoverBody, UncontrolledPopover } from "reactstrap";
 
 const SMFStep1 = () => {
   const [district, setDistrict] = useState("");
@@ -15,12 +14,6 @@ const SMFStep1 = () => {
         EFFECTIVE 3/15/2023: YOU ARE RESPONSIBLE FOR GENERATING YOUR OWN
         CERTIFICATE OF SERVICE PURSUANT TO LOCAL RULES!!!
       </h1>
-      {/* <SelectDropdown
-        selected={district}
-        setSelected={setDistrict}
-        items={["CALIFORNIA"]}
-        className="smf_dropdown_btn"
-      /> */}
 
       <div className="smf1_tell_about">
         <h1>
@@ -90,7 +83,7 @@ const SMFStep1 = () => {
               <button id="PopoverFocus" type="button">
                 {iInfo}
               </button>
-              <UncontrolledPopover
+              {/* <UncontrolledPopover
                 placement="bottom"
                 target="PopoverFocus"
                 trigger="focus"
@@ -107,7 +100,7 @@ const SMFStep1 = () => {
                   instructions if you do not want us to mail to the MML for each
                   case number listed.
                 </PopoverBody>
-              </UncontrolledPopover>
+              </UncontrolledPopover> */}
             </div>
           </div>
         </div>

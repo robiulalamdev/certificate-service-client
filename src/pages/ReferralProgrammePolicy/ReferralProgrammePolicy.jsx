@@ -1,8 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState } from "react";
 import "../../styles/referralProgrammePolicy.css";
-import { Modal, ModalBody } from "reactstrap";
-import { iCloseMailModal } from "../../utiles/icons";
 
 const ReferralProgrammePolicy = () => {
   const [openMailContent, setOpenMailContent] = useState(false);
@@ -248,7 +246,7 @@ const ReferralProgrammePolicy = () => {
         </form>
       </div>
 
-      <Modal
+      {/* <Modal
         isOpen={openMailContent}
         onClose={() => setOpenMailContent(false)}
         className="review_mail_modal"
@@ -408,7 +406,7 @@ const ReferralProgrammePolicy = () => {
             <p>email</p>
           </div>
         </div>
-      </Modal>
+      </Modal> */}
     </div>
   );
 };

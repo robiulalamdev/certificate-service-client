@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import "../../styles/costEstimate.css";
 import { iCloseMailModal, iInfo } from "../../utiles/icons";
-import { Modal } from "reactstrap";
 
 const CostEstimate = () => {
   const [open, setOpen] = useState(false);
@@ -137,7 +136,7 @@ const CostEstimate = () => {
         </div>
       )}
 
-      <Modal
+      {/* <Modal
         isOpen={open}
         onClose={() => setOpen(false)}
         className="user_agreement_modal"
@@ -198,7 +197,7 @@ const CostEstimate = () => {
             </a>{" "}
           </p>
         </div>
-      </Modal>
+      </Modal> */}
     </div>
   );
 };

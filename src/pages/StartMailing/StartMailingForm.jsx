@@ -8,6 +8,8 @@ import SMFStep5 from "../../components/start-mailing-forms/SMFStep5";
 import SMFStep6 from "../../components/start-mailing-forms/SMFStep6";
 import SMFStep7 from "../../components/start-mailing-forms/SMFStep7";
 import SMFStep8 from "../../components/start-mailing-forms/SMFStep8";
+import SMFStep9 from "../../components/start-mailing-forms/SMFStep9";
+import SMFStep10 from "../../components/start-mailing-forms/SMFStep10";
 
 const StartMailingForm = () => {
   // const [step, setStep] = useState(1);
@@ -29,8 +31,10 @@ const StartMailingForm = () => {
         <SMFStep5 />
         <SMFStep6 />
         <SMFStep7 />
-      */}
         <SMFStep8 />
+        <SMFStep9 />
+      */}
+        <SMFStep10 />
       </form>
 
       <div className="flex items-center justify-center w-full">

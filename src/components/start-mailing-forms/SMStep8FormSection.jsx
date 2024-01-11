@@ -9,7 +9,7 @@ import {
 const SMStep8FormSection = ({ number }) => {
   return (
     <>
-      <div className="flex items-start gap-[19px]">
+      <div className="flex flex-col md:flex-row items-start gap-[19px]">
         <h1 className="text-[50px] text-[#0055A3] font-semibold leading-[60.25px] font-outfit mt-4">
           {number}.
         </h1>

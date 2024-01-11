@@ -1,8 +1,10 @@
-import React from "react";
 import logo from "../../assets/images/global/logo.png";
 import { Link } from "react-router-dom";
+import useAuth from "../../lib/useAuth";
 
 const Header = () => {
+  const { user, isLoading, logout } = useAuth();
+  // console.log(user);
   return (
     <div className="navbar__section min-h-[71px]">
       <div className="container flex justify-between items-center min-h-[71px] h-full">
@@ -17,22 +19,26 @@ const Header = () => {
         </div>
         <div className="hidden lg:block">
           <div className="button-parent ">
-            <Link to="/login">
-              <button
-                className="bg-white w-[110px] h-[45px] border border-primaryDark rounded text-black"
-                type="submit"
-              >
-                Log In
-              </button>
-            </Link>
-            <Link to="/create-account">
-              <button
-                className="bg-primaryDark w-[150px] h-[45px] custom rounded"
-                type="submit"
-              >
-                Create account
-              </button>
-            </Link>
+            {!user && !isLoading && (
+              <>
+                <Link to="/login">
+                  <button
+                    className="bg-white w-[110px] h-[45px] border border-primaryDark rounded text-black"
+                    type="submit"
+                  >
+                    Log In
+                  </button>
+                </Link>
+                <Link to="/create-account">
+                  <button
+                    className="bg-primaryDark w-[150px] h-[45px] custom rounded"
+                    type="submit"
+                  >
+                    Create account
+                  </button>
+                </Link>
+              </>
+            )}
 
             <button
               className="bg-primaryDark w-[150px] h-[45px] custom rounded custom"
@@ -40,6 +46,16 @@ const Header = () => {
             >
               <i className="fa-regular fa-comment-dots"></i> Let’s chat
             </button>
+
+            {user && !isLoading && (
+              <button
+                onClick={() => logout()}
+                className="bg-red-600 w-[110px] h-[45px] text-white rounded"
+                type="submit"
+              >
+                Log out
+              </button>
+            )}
           </div>
         </div>
       </div>

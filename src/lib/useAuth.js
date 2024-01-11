@@ -32,8 +32,9 @@ const useAuth = () => {
 
   const logout = () => {
     setIsLoading(true);
-    localStorage.removeItem(token_name);
+    localStorage.removeItem(SECRET_TOKEN);
     setUser(null);
+    window.location.reload();
     setIsLoading(false);
   };
 

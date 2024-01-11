@@ -25,6 +25,7 @@ import DOverview from "../pages/Dashboard/DOverview";
 import DSettings from "../pages/Dashboard/DSettings";
 import StartMailingForm from "../pages/StartMailing/StartMailingForm";
 import UserAgreement from "../pages/StartMailing/UserAgreement";
+import PrivateRoute from "./PrivateRoute";
 
 export const routes = createBrowserRouter([
   {
@@ -127,8 +128,16 @@ export const routes = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <DashboardLayout />,
+    element: (
+      <PrivateRoute>
+        <DashboardLayout />
+      </PrivateRoute>
+    ),
     children: [
+      {
+        path: "/dashboard",
+        element: <DOverview />,
+      },
       {
         path: "/dashboard/overview",
         element: <DOverview />,

@@ -1,4 +1,5 @@
 import logo from "../../../assets/brand/logo.png";
+import useAuth from "../../../lib/useAuth";
 import {
   iCredit,
   iEstimate,
@@ -59,6 +60,7 @@ const routes = [
 ];
 
 const Sidebar_ui = () => {
+  const { logout } = useAuth();
   const { pathname } = useLocation();
   return (
     <div className="d_sidebar_container">
@@ -85,8 +87,11 @@ const Sidebar_ui = () => {
           ))}
         </div>
         <div className="w-full">
-          <button className="d_logout_btn">
-            {iLogout} <h1>Log out </h1>
+          <button
+            onClick={() => logout()}
+            className="d_logout_btn hover:!text-primary"
+          >
+            {iLogout} <h1 className="hover:!text-primary">Log out </h1>
           </button>
         </div>
       </div>

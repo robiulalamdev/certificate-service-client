@@ -5,15 +5,15 @@ import img2 from "../../assets/images/global/sm-bg.png";
 const HomePage = () => {
   return (
     <div className="hero__section">
-      <div className="container">
+      <div className="container mx-auto">
         <div className="hero__area">
-          <h2 className="hero-h2 d-none d-md-block">How it works</h2>
-          <div className="vid-parent">
+          <h2 className="hero-h2 hidden md:block">How it works</h2>
+          <div className="vid-parent mx-auto">
             <a href="#">
-              <img className="img-fluid" src={video1} alt="link" />
+              <img className="img-fluid mx-auto" src={video1} alt="link" />
             </a>
           </div>
-          <h2 className="hero-h2 d-block d-md-none">How it works</h2>
+          <h2 className="hero-h2 block md:hidden">How it works</h2>
           <div className="img-parent">
             <a href="#">
               <img

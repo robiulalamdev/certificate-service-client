@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "../../styles/signup.css";
 import img from "../../assets/images/login/img.png";
 import { useForm } from "react-hook-form";
@@ -20,19 +19,16 @@ const Login = () => {
       className="container"
       style={{ minHeight: "100vh", backgroundColor: "white" }}
     >
-      <div className="row">
-        <div className="auth_left_part col-md-6">
-          <img className="w-100 auth_side_image" src={img} alt="" />
+      <div className="grid md:grid-cols-2">
+        <div className="auth_left_part">
+          <img className="w-full auth_side_image" src={img} alt="" />
         </div>
-        <form
-          onSubmit={handleSubmit(handleLogin)}
-          className="auth_right_part col-md-6"
-        >
-          <div className="d-flex justify-content-center align-items-center  gap-4 mb-5">
+        <form onSubmit={handleSubmit(handleLogin)} className="auth_right_part">
+          <div className="flex justify-center items-center  gap-4 mb-5">
             <button className="signup_btn">Log In</button>
             <button className="login_btn">Sign up</button>
           </div>
-          <div className="auth_input_container w-100">
+          <div className="auth_input_container w-full">
             <label htmlFor="E-MAIL">E-MAIL</label>
             <input
               {...register("email", {
@@ -47,7 +43,7 @@ const Login = () => {
               placeholder="Enter your email"
             />
           </div>
-          <div className="auth_input_container w-100">
+          <div className="auth_input_container w-full">
             <label htmlFor="password">PASSWORD</label>
             <input
               {...register("password", {
@@ -63,7 +59,7 @@ const Login = () => {
             />
           </div>
 
-          <div className="d-flex justify-content-between align-items-center gap-4 flex-wrap flex-md-nowrap w-100 mt-5">
+          <div className="flex flex-col-reverse md:flex-row md:justify-between md:items-center !gap-y-4 gap-x-4 w-full mt-5">
             <button type="submit" className="auth_register_btn">
               login
             </button>

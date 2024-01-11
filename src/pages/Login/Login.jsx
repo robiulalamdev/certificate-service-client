@@ -1,17 +1,49 @@
 import "../../styles/signup.css";
 import img from "../../assets/images/login/img.png";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { Button } from "@material-tailwind/react";
+import { SpinnerCircularFixed } from "spinners-react";
+import { usePostLoginMutation } from "../../redux/features/auth/authApi";
+import { toast } from "react-toastify";
+import { SECRET_TOKEN } from "../../lib/global";
 
 const Login = () => {
+  const [postLogin, { isLoading }] = usePostLoginMutation();
   const {
     handleSubmit,
     register,
+    setError,
     formState: { errors },
   } = useForm();
+  const navigate = useNavigate();
 
-  const handleLogin = (data) => {
-    console.log(data);
+  const handleLogin = async (data) => {
+    const options = { data: data };
+    const result = await postLogin(options);
+    if (result?.data?.success) {
+      localStorage.setItem(SECRET_TOKEN, result?.data?.accessToken);
+      toast.success("User Login Successful");
+      navigate("/");
+    }
+    if (
+      result?.error?.data?.success === false &&
+      result?.error?.data?.type === "email"
+    ) {
+      setError("email", {
+        type: "manual",
+        message: result?.error?.data?.message,
+      });
+    }
+    if (
+      result?.error?.data?.success === false &&
+      result?.error?.data?.type === "password"
+    ) {
+      setError("password", {
+        type: "manual",
+        message: result?.error?.data?.message,
+      });
+    }
   };
 
   return (
@@ -38,10 +70,18 @@ const Login = () => {
                   message: "Invalid email address",
                 },
               })}
-              className="auth_input"
+              className={`auth_input ${
+                errors?.email && "!border-b !border-red-600"
+              }`}
               type="email"
               placeholder="Enter your email"
             />
+
+            {errors.email && (
+              <small className="text-xs text-red-600">
+                {errors.email.message}
+              </small>
+            )}
           </div>
           <div className="auth_input_container w-full">
             <label htmlFor="password">PASSWORD</label>
@@ -53,16 +93,35 @@ const Login = () => {
                   message: "Password must be at least 8 characters",
                 },
               })}
-              className="auth_input"
+              className={`auth_input ${
+                errors?.password && "!border-b !border-red-600"
+              }`}
               type="password"
               placeholder="Enter your password"
             />
+            {errors.password && (
+              <small className="text-xs text-red-600">
+                {errors.password.message}
+              </small>
+            )}
           </div>
 
           <div className="flex flex-col-reverse md:flex-row md:justify-between md:items-center !gap-y-4 gap-x-4 w-full mt-5">
-            <button type="submit" className="auth_register_btn">
+            <Button
+              type="submit"
+              className="auth_register_btn bg-[#008EDE] rounded-[57px] shadow-none flex justify-center items-center gap-3 duration-150"
+            >
+              {isLoading && (
+                <SpinnerCircularFixed
+                  size={25}
+                  thickness={170}
+                  speed={350}
+                  color="white"
+                  secondaryColor="rgba(124, 57, 172, 0.19)"
+                />
+              )}
               login
-            </button>
+            </Button>
             <Link to="/forgot-password" className="forgot_pass">
               Forgot password
             </Link>

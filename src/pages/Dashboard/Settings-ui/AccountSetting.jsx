@@ -38,7 +38,7 @@ const AccountSetting = () => {
         </div>
         <div className="account_setting_input_container">
           <label htmlFor="Phone_number">Phone number</label>
-          <div className="account_setting_input_container d-flex align-items-center">
+          <div className="account_setting_input_container flex items-center">
             <select
               className="accouont_setting_phone_select"
               style={{ maxWidth: "80px" }}

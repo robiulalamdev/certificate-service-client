@@ -104,10 +104,10 @@ const AddPaymentForm = ({ formStep, setFormStep }) => {
           />
         </div>
       </div>
-      <div className="d-flex justify-content-between gap-3">
+      <div className="flex justify-between gap-3">
         <div className="ca_input_container">
           <label htmlFor="expiration_date">Expiration Date</label>
-          <div className="d-flex gap-3">
+          <div className="flex gap-3">
             <input
               {...register("expiration_date")}
               className="ca_input w-full"
@@ -133,7 +133,7 @@ const AddPaymentForm = ({ formStep, setFormStep }) => {
         </div>
       </div>
 
-      <div className="d-flex justify-content-center mt-5">
+      <div className="flex justify-center mt-5">
         <button type="submit" className="next_btn">
           Next
         </button>

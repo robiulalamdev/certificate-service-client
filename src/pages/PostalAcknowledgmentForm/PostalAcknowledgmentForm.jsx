@@ -125,7 +125,7 @@ const PostalAcknowledgmentForm = () => {
           </form>
         </section>
 
-        <div className="d-flex justify-content-center">
+        <div className="flex justify-center">
           <button className="paf_click_here_to_card">
             CLICK HERE TO READ THE FULL NCOA LINK INFORMATION PACKAGE
           </button>
@@ -201,7 +201,7 @@ const PostalAcknowledgmentForm = () => {
                   Commerce Security Act), respectively
                 </label>
                 <div
-                  className="d-flex align-items-center flex-wrap"
+                  className="flex items-center flex-wrap"
                   style={{ gap: "20px", marginTop: "47px" }}
                 >
                   <button className="paf_submit_btn">Submit PAF Form</button>

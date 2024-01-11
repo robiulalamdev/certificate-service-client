@@ -7,7 +7,7 @@ const ReasonsToOutsource = () => {
   return (
     <div className="container mx-auto p-4">
       <ThemeBreadCrumb routes="HOME / WHAT IS COS / REASONS TO OUTSOURCE" />
-      <div className="d-flex flex-column flex-lg-row justify-content-lg-evenly align-items-center gap-5 mt-5 reason_to_outsource_banner_container">
+      <div className="flex flex-col lg:flex-row lg:justify-evenly items-center gap-5 mt-5 reason_to_outsource_banner_container">
         <img className="" src={banner} alt="" />
         <div className="me-5 text-center">
           <h1 className="reason_to_outsource_title">6 REASONS</h1>

@@ -109,7 +109,7 @@ const CreateAccount = () => {
         <div className={`${formStep === 7 ? "d-block" : "d-none"}`}>
           <div
             onClick={() => setAgre(!agre)}
-            className="cursor-pointer d-flex align-items-center gap-2 mt-4"
+            className="cursor-pointer flex items-center gap-2 mt-4"
           >
             <input className="ca_agre_input" type="checkbox" checked={agre} />
             <p className="ca_agre">
@@ -119,7 +119,7 @@ const CreateAccount = () => {
             </p>
           </div>
 
-          <div className="d-flex flex-column-reverse flex-md-row justify-content-center align-items-center gap-4 pt-5">
+          <div className="flex flex-col-reverse md:flex-row justify-center items-center gap-4 pt-5">
             <button className="cra_ac_btn">Create your account</button>
             <button className="clear_form_btn">Clear</button>
           </div>

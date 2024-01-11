@@ -20,7 +20,7 @@ const ResetPassword = () => {
   };
   return (
     <div
-      className="container d-flex justify-content-center align-items-center"
+      className="container flex justify-center items-center"
       style={{ minHeight: "100vh", backgroundColor: "white" }}
     >
       {step === 1 && (

@@ -122,7 +122,7 @@ const AccountContactInfoForm = ({ formStep, setFormStep }) => {
       </div>
       <div
         onClick={() => setAgre(!agre)}
-        className="cursor-pointer d-flex align-items-center gap-2 mt-4"
+        className="cursor-pointer flex items-center gap-2 mt-4"
       >
         <input className="ca_agre_input" type="checkbox" checked={agre} />
         <p className="ca_agre">
@@ -131,7 +131,7 @@ const AccountContactInfoForm = ({ formStep, setFormStep }) => {
         </p>
       </div>
 
-      <div className="d-flex justify-content-center mt-5">
+      <div className="flex justify-center mt-5">
         <button type="submit" className="next_btn">
           Next
         </button>

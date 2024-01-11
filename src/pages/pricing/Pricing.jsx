@@ -22,14 +22,14 @@ const Pricing = () => {
           </p>
         </div>
 
-        <section className="see_example_section row align-items-center px-md-5 py-5">
+        <section className="see_example_section grid lg:grid-cols-12 align-items-center px-md-5 py-5">
           <img
-            className="col-lg-4 mx-auto"
+            className="lg:col-span-4 mx-auto"
             style={{ maxWidth: "350px" }}
             src={img}
             alt=""
           />
-          <div className="col-lg-8 mx-auto mt-5 mt-lg-0 text-center text-lg-start">
+          <div className="lg:col-span-8 mx-auto mt-5 mt-lg-0 text-center text-lg-start">
             <h1>SEE EXAMPLE #1</h1>
             <p className="mt-2">
               PRINT DOCUMENTS ONE PAGE <br /> PER SIDE OF SHEET

@@ -11,7 +11,7 @@ const StartMailingForm = () => {
     <div className="container mx-auto pb-5" style={{ minHeight: "100vh" }}>
       {/* {step > 1 && (
         <div
-          className="d-flex justify-content-end"
+          className="flex justify-end"
           style={{ marginTop: "37px" }}
         >
           <div className="smf1_cancel_upload_btn">Cancel Upload</div>
@@ -24,7 +24,7 @@ const StartMailingForm = () => {
         <SMFStep4 />
       </form>
 
-      <div className="d-flex align-items-center justify-content-center w-full">
+      <div className="flex items-center justify-center w-full">
         <button className="smf_btn">Submit</button>
         {/* {step === 11 ? (
           <button className="smf_btn">Submit</button>

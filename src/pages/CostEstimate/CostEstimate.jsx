@@ -23,7 +23,7 @@ const CostEstimate = () => {
                 1. How many PAGES are in the document(s) you intend to upload?
               </h1>
               <div
-                className="d-flex align-items-center"
+                className="flex items-center"
                 style={{ gap: "16px", maxWidth: "fit-content" }}
               >
                 <input className="" type="number" />
@@ -33,7 +33,7 @@ const CostEstimate = () => {
             <div className="cost_estimate_list_container">
               <h1>2. How many parties will be receiving your documents?</h1>
               <div
-                className="d-flex align-items-center"
+                className="flex items-center"
                 style={{ gap: "16px", maxWidth: "fit-content" }}
               >
                 <input className="" type="number" />
@@ -43,7 +43,7 @@ const CostEstimate = () => {
             <div className="cost_estimate_list_container">
               <h1>3. We will print on both sides of the sheet.</h1>
               <div
-                className="d-flex align-items-center"
+                className="flex items-center"
                 style={{ gap: "16px", maxWidth: "fit-content" }}
               >
                 <input className="" type="number" />
@@ -53,7 +53,7 @@ const CostEstimate = () => {
             <div className="cost_estimate_list_container">
               <h1>4. We will print your documents 1 page per side.</h1>
               <div
-                className="d-flex align-items-center"
+                className="flex items-center"
                 style={{ gap: "16px", maxWidth: "fit-content" }}
               >
                 <input className="" type="number" />

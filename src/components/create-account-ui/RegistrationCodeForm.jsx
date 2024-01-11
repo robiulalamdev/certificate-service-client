@@ -30,7 +30,7 @@ const RegistrationCodeForm = ({ formStep, setFormStep }) => {
       row
       `}
     >
-      <div className="ca_input_container w-full d-flex flex-column align-items-center">
+      <div className="ca_input_container w-full flex flex-col items-center">
         <label className="text-center" htmlFor="coupon_code">
           Registration / Coupon Code
         </label>
@@ -42,7 +42,7 @@ const RegistrationCodeForm = ({ formStep, setFormStep }) => {
         />
       </div>
 
-      <div className="d-flex justify-content-center mt-5">
+      <div className="flex justify-center mt-5">
         <button type="submit" className="next_btn">
           Next
         </button>

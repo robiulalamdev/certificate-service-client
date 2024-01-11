@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import ThemeBreadCrumb from "../../components/commons/ThemeBreadCrumb";
 import img from "../../assets/images/what-is-cos-images/bankrupcy.png";
 import { Link } from "react-router-dom";

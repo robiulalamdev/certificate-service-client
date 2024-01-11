@@ -44,7 +44,7 @@ const ReferralProgramme = () => {
               <input name="address" type="text" />
             </div>
             <div
-              className="d-flex align-items-end referral_input_container w-full"
+              className="flex items-end referral_input_container w-full"
               style={{ gap: "28px" }}
             >
               <div className="w-full">
@@ -140,7 +140,7 @@ const ReferralProgramme = () => {
               <input name="address" type="text" />
             </div>
             <div
-              className="d-flex align-items-end referral_input_container w-full"
+              className="flex items-end referral_input_container w-full"
               style={{ gap: "28px" }}
             >
               <div className="w-full">

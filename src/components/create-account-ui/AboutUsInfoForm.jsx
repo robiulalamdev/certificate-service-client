@@ -70,7 +70,7 @@ const AboutUsInfoForm = ({ formStep, setFormStep }) => {
         />
       </div>
 
-      <div className="d-flex justify-content-center mt-5">
+      <div className="flex justify-center mt-5">
         <button type="submit" className="next_btn">
           Next
         </button>

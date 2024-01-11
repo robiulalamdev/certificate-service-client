@@ -51,15 +51,12 @@ const UpdateCreditCard = () => {
             </div>
 
             <div
-              className="d-flex align-items-end flex-wrap w-full col_span_2 referral_input_container"
+              className="flex items-end flex-wrap w-full col_span_2 referral_input_container"
               style={{ gap: "28px" }}
             >
               <div>
                 <label htmlFor="zip">Expiration Date</label>
-                <div
-                  className="d-flex align-items-end w-full"
-                  style={{ gap: "28px" }}
-                >
+                <div className="flex items-end w-full" style={{ gap: "28px" }}>
                   <select className="small_input" style={{ minWidth: "115px" }}>
                     {numberMonths.map((m, index) => (
                       <option key={index} value={m.number}>

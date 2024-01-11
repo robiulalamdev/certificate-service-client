@@ -17,7 +17,7 @@ const StartMailing = () => {
 
       <div className="start_mailing_btn_container">
         <h1>RETURNS A CERTIFICATE OF SERVICE</h1>
-        <div className="d-flex align-items-center flex-wrap gap-4">
+        <div className="flex items-center flex-wrap gap-4">
           <button>BANKRUPTCY CASE MAILING</button>
           <button>FEDERAL COURT MAILING</button>
           <button>STATE COURT MAILING</button>
@@ -29,7 +29,7 @@ const StartMailing = () => {
       </div>
       <div className="start_mailing_btn_container">
         <h1>RETURNS A PROOF OF MAILING</h1>
-        <div className="d-flex align-items-center flex-wrap gap-4">
+        <div className="flex items-center flex-wrap gap-4">
           <button>MAIL A LETTER</button>
           <button>DIRECT MAIL MARKETING</button>
         </div>

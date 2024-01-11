@@ -44,7 +44,7 @@ const AboutUsInfoForm = ({ formStep, setFormStep }) => {
   return (
     <form
       onSubmit={handleSubmit(handleForm)}
-      className={`${formStep === 6 ? "d-block" : "d-none"}
+      className={`${formStep === 6 ? "block" : "hidden"}
       row
       `}
     >

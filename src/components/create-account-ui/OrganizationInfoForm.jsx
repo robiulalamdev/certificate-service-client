@@ -51,7 +51,7 @@ const OrganizationInfoForm = ({ formStep, setFormStep }) => {
   return (
     <form
       onSubmit={handleSubmit(handleForm)}
-      className={`${formStep === 1 ? "d-block" : "d-none"}
+      className={`${formStep === 1 ? "block" : "hidden"}
       row
       `}
     >
@@ -81,8 +81,8 @@ const OrganizationInfoForm = ({ formStep, setFormStep }) => {
         />
       </div>
 
-      <div className="row w-full pe-0">
-        <div className="ca_input_container col-12 col-md-4 pe-0">
+      <div className="grid grid-cols-12 gap-4 w-full pe-0">
+        <div className="ca_input_container col-span-12 md:col-span-4 pe-0">
           <label htmlFor="city">city</label>
           <input
             {...register("city")}
@@ -90,7 +90,7 @@ const OrganizationInfoForm = ({ formStep, setFormStep }) => {
             type="text"
           />
         </div>
-        <div className="ca_input_container col-12 col-md-4 pe-0">
+        <div className="ca_input_container col-span-12 md:col-span-4 pe-0">
           <label htmlFor="state">State</label>
           <Select
             {...register("state")}
@@ -99,7 +99,7 @@ const OrganizationInfoForm = ({ formStep, setFormStep }) => {
             options={options}
           />
         </div>
-        <div className="ca_input_container col-12 col-md-4 pe-0">
+        <div className="ca_input_container col-span-12 md:col-span-4 pe-0">
           <label htmlFor="zip">Zip</label>
           <input {...register("zip")} className="ca_input w-full" type="text" />
         </div>

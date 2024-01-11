@@ -56,7 +56,7 @@ const AccountContactInfoForm = ({ formStep, setFormStep }) => {
   return (
     <form
       onSubmit={handleSubmit(handleForm)}
-      className={`${formStep === 2 ? "d-block" : "d-none"}
+      className={`${formStep === 2 ? "block" : "hidden"}
       row
       `}
     >

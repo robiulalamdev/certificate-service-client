@@ -33,7 +33,7 @@ const AddPaymentForm = ({ formStep, setFormStep }) => {
   return (
     <form
       onSubmit={handleSubmit(handleForm)}
-      className={`${formStep === 4 ? "d-block" : "d-none"}
+      className={`${formStep === 4 ? "block" : "hidden"}
       row
       `}
     >

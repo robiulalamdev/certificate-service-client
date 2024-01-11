@@ -7,7 +7,7 @@ const ScheduleForm = ({ formStep, setFormStep }) => {
   return (
     <div
       className={`flex justify-center mt-5 ${
-        formStep === 5 ? "d-block" : "d-none"
+        formStep === 5 ? "block" : "hidden"
       }
     `}
     >

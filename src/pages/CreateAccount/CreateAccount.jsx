@@ -106,7 +106,7 @@ const CreateAccount = () => {
         <AddPaymentForm formStep={formStep} setFormStep={setFormStep} />
         <ScheduleForm formStep={formStep} setFormStep={setFormStep} />
         <AboutUsInfoForm formStep={formStep} setFormStep={setFormStep} />
-        <div className={`${formStep === 7 ? "d-block" : "d-none"}`}>
+        <div className={`${formStep === 7 ? "block" : "hidden"}`}>
           <div
             onClick={() => setAgre(!agre)}
             className="cursor-pointer flex items-center gap-2 mt-4"

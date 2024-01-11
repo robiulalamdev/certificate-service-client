@@ -26,7 +26,7 @@ const RegistrationCodeForm = ({ formStep, setFormStep }) => {
   return (
     <form
       onSubmit={handleSubmit(handleForm)}
-      className={`${formStep === 3 ? "d-block" : "d-none"}
+      className={`${formStep === 3 ? "block" : "hidden"}
       row
       `}
     >

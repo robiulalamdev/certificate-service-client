@@ -10,6 +10,8 @@ import SMFStep7 from "../../components/start-mailing-forms/SMFStep7";
 import SMFStep8 from "../../components/start-mailing-forms/SMFStep8";
 import SMFStep9 from "../../components/start-mailing-forms/SMFStep9";
 import SMFStep10 from "../../components/start-mailing-forms/SMFStep10";
+import SMFStep11 from "../../components/start-mailing-forms/SMFStep11";
+import SMFStep12 from "../../components/start-mailing-forms/SMFStep12";
 
 const StartMailingForm = () => {
   // const [step, setStep] = useState(1);
@@ -24,17 +26,19 @@ const StartMailingForm = () => {
         </div>
       )} */}
       <form className="grid grid-cols-1 gap-y-[60px]">
-        {/* <SMFStep1 />
+        <SMFStep1 />
         <SMFStep2 />
         <SMFStep3 />
-        <SMFStep4 /> 
+        <SMFStep4 />
         <SMFStep5 />
         <SMFStep6 />
         <SMFStep7 />
         <SMFStep8 />
         <SMFStep9 />
-      */}
         <SMFStep10 />
+        <SMFStep11 />
+
+        <SMFStep12 />
       </form>
 
       <div className="flex items-center justify-center w-full">

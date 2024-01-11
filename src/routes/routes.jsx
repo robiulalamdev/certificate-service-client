@@ -24,6 +24,7 @@ import DashboardLayout from "../layout/DashboardLayout";
 import DOverview from "../pages/Dashboard/DOverview";
 import DSettings from "../pages/Dashboard/DSettings";
 import StartMailingForm from "../pages/StartMailing/StartMailingForm";
+import UserAgreement from "../pages/StartMailing/UserAgreement";
 
 export const routes = createBrowserRouter([
   {
@@ -101,6 +102,10 @@ export const routes = createBrowserRouter([
       {
         path: "/start-mailing/:slug",
         element: <StartMailingForm />,
+      },
+      {
+        path: "/start-mailing/user-agreement",
+        element: <UserAgreement />,
       },
     ],
   },

@@ -5,6 +5,12 @@
 /* styles.css */
 
 /* General Styles */
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Rubik Lines", sans-serif;
+}
 .container {
   max-width: 1440px !important;
   margin-left: auto !important;

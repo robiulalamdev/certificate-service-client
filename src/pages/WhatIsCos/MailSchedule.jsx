@@ -10,7 +10,7 @@ const MailSchedule = () => {
     <div>
       <ThemeBreadCrumb routes="HOME / WHAT IS COS / MAIL SCHEDULE" />
       <section className="mail_schedule_banner px-2 !py-[66px]">
-        <div className="grid lg:grid-cols-2 container mx-auto text-center text-md-start">
+        <div className="grid lg:grid-cols-2 container mx-auto text-center md:text-left">
           <div className="">
             <h1>
               We are on a <br />

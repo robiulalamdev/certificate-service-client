@@ -59,7 +59,7 @@ const OrganizationInfoForm = ({ formStep, setFormStep }) => {
         <label htmlFor="company_name">Company Name</label>
         <input
           {...register("company_name")}
-          className="ca_input w-100"
+          className="ca_input w-full"
           name="company_name"
           type="text"
         />
@@ -68,7 +68,7 @@ const OrganizationInfoForm = ({ formStep, setFormStep }) => {
         <label htmlFor="address">Address</label>
         <input
           {...register("address")}
-          className="ca_input w-100"
+          className="ca_input w-full"
           type="text"
         />
       </div>
@@ -76,28 +76,32 @@ const OrganizationInfoForm = ({ formStep, setFormStep }) => {
         <label htmlFor="address_cont">Address (cont.)</label>
         <input
           {...register("address_cont")}
-          className="ca_input w-100"
+          className="ca_input w-full"
           type="text"
         />
       </div>
 
-      <div className="row w-100 pe-0">
+      <div className="row w-full pe-0">
         <div className="ca_input_container col-12 col-md-4 pe-0">
           <label htmlFor="city">city</label>
-          <input {...register("city")} className="ca_input w-100" type="text" />
+          <input
+            {...register("city")}
+            className="ca_input w-full"
+            type="text"
+          />
         </div>
         <div className="ca_input_container col-12 col-md-4 pe-0">
           <label htmlFor="state">State</label>
           <Select
             {...register("state")}
             onChange={setSelectedOption}
-            className="ca_input w-100"
+            className="ca_input w-full"
             options={options}
           />
         </div>
         <div className="ca_input_container col-12 col-md-4 pe-0">
           <label htmlFor="zip">Zip</label>
-          <input {...register("zip")} className="ca_input w-100" type="text" />
+          <input {...register("zip")} className="ca_input w-full" type="text" />
         </div>
       </div>
 
@@ -106,20 +110,20 @@ const OrganizationInfoForm = ({ formStep, setFormStep }) => {
           <label htmlFor="main_office_phone">Main Office Phone</label>
           <input
             {...register("main_office_phone")}
-            className="ca_input w-100"
+            className="ca_input w-full"
             type="text"
           />
         </div>
         <div className="ca_input_container col-md-6 pe-0">
           <label htmlFor="fax">Fax</label>
-          <input {...register("fax")} className="ca_input w-100" type="text" />
+          <input {...register("fax")} className="ca_input w-full" type="text" />
         </div>
       </div>
       <div className="ca_input_container">
         <label htmlFor="web_site_url_address">Web site URL address</label>
         <input
           {...register("web_site_url_address")}
-          className="ca_input w-100"
+          className="ca_input w-full"
           type="url"
         />
       </div>

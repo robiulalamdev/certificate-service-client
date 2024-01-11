@@ -33,7 +33,7 @@ const SMFStep3 = () => {
               <div className="smf3_file_input">
                 <p>Choose File</p>
                 <input
-                  className="w-100 choose_file"
+                  className="w-full choose_file"
                   type="file"
                   accept=".pdf, .doc"
                   multiple={false}
@@ -64,7 +64,7 @@ const SMFStep3 = () => {
               <div className="smf3_file_input">
                 <p>Choose File</p>
                 <input
-                  className="w-100 choose_file"
+                  className="w-full choose_file"
                   type="file"
                   accept=".pdf, .doc"
                   multiple={false}
@@ -93,7 +93,7 @@ const SMFStep3 = () => {
               <div className="smf3_file_input">
                 <p>Choose File</p>
                 <input
-                  className="w-100 choose_file"
+                  className="w-full choose_file"
                   type="file"
                   accept=".pdf, .doc"
                   multiple={false}
@@ -122,7 +122,7 @@ const SMFStep3 = () => {
               <div className="smf3_file_input">
                 <p>Choose File</p>
                 <input
-                  className="w-100 choose_file"
+                  className="w-full choose_file"
                   type="file"
                   accept=".pdf, .doc"
                   multiple={false}
@@ -151,7 +151,7 @@ const SMFStep3 = () => {
               <div className="smf3_file_input">
                 <p>Choose File</p>
                 <input
-                  className="w-100 choose_file"
+                  className="w-full choose_file"
                   type="file"
                   accept=".pdf, .doc"
                   multiple={false}
@@ -180,7 +180,7 @@ const SMFStep3 = () => {
               <div className="smf3_file_input">
                 <p>Choose File</p>
                 <input
-                  className="w-100 choose_file"
+                  className="w-full choose_file"
                   type="file"
                   accept=".pdf, .doc"
                   multiple={false}
@@ -210,7 +210,7 @@ const SMFStep3 = () => {
               <div className="smf3_file_input">
                 <p>Choose File</p>
                 <input
-                  className="w-100 choose_file"
+                  className="w-full choose_file"
                   type="file"
                   accept=".pdf, .doc"
                   multiple={false}
@@ -235,7 +235,7 @@ const SMFStep3 = () => {
               <div className="smf3_file_input">
                 <p>Choose File</p>
                 <input
-                  className="w-100 choose_file"
+                  className="w-full choose_file"
                   type="file"
                   accept=".pdf, .doc"
                   multiple={false}

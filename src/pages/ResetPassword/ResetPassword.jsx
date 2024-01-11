@@ -26,7 +26,7 @@ const ResetPassword = () => {
       {step === 1 && (
         <form
           onSubmit={handleSubmit(handlePassword)}
-          className="forgot_pass_container w-100 h-100 bg-white"
+          className="forgot_pass_container w-full h-100 bg-white"
         >
           <h1>Reset Password</h1>
           <p className="pb-4">Choose a new password for your account</p>
@@ -87,7 +87,7 @@ const ResetPassword = () => {
         </form>
       )}
       {step === 2 && (
-        <div className="forgot_pass_container d-flex flex-column justify-content-center align-items-center gap-3 w-100 h-100 bg-white">
+        <div className="forgot_pass_container d-flex flex-column justify-content-center align-items-center gap-3 w-full h-100 bg-white">
           <div
             style={{
               backgroundColor: "#34a85311",

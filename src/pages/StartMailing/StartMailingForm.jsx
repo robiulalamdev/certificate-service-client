@@ -24,7 +24,7 @@ const StartMailingForm = () => {
         <SMFStep4 />
       </form>
 
-      <div className="d-flex align-items-center justify-content-center w-100">
+      <div className="d-flex align-items-center justify-content-center w-full">
         <button className="smf_btn">Submit</button>
         {/* {step === 11 ? (
           <button className="smf_btn">Submit</button>

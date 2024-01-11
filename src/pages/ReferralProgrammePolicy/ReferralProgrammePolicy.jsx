@@ -166,10 +166,10 @@ const ReferralProgrammePolicy = () => {
                 <input name="address" type="text" />
               </div>
               <div
-                className="d-flex align-items-end referral_input_container w-100"
+                className="d-flex align-items-end referral_input_container w-full"
                 style={{ gap: "28px" }}
               >
-                <div className="w-100">
+                <div className="w-full">
                   <label htmlFor="city">City</label>
                   <input name="city" type="text" />
                 </div>

@@ -63,7 +63,7 @@ const Sidebar_ui = () => {
   return (
     <div className="d_sidebar_container">
       <div className="d_sidebar_item_container">
-        <div className="w-100">
+        <div className="w-full">
           <div className="d_sidebar_brand">
             <img src={logo} alt="" />
             <h1>CertificateofService.com</h1>
@@ -84,7 +84,7 @@ const Sidebar_ui = () => {
             </Link>
           ))}
         </div>
-        <div className="w-100">
+        <div className="w-full">
           <button className="d_logout_btn">
             {iLogout} <h1>Log out </h1>
           </button>

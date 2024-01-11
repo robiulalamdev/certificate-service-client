@@ -30,13 +30,13 @@ const RegistrationCodeForm = ({ formStep, setFormStep }) => {
       row
       `}
     >
-      <div className="ca_input_container w-100 d-flex flex-column align-items-center">
+      <div className="ca_input_container w-full d-flex flex-column align-items-center">
         <label className="text-center" htmlFor="coupon_code">
           Registration / Coupon Code
         </label>
         <input
           {...register("coupon_code")}
-          className="ca_input w-100 mx-auto"
+          className="ca_input w-full mx-auto"
           style={{ maxWidth: "374px" }}
           type="text"
         />

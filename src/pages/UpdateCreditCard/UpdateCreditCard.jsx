@@ -51,13 +51,13 @@ const UpdateCreditCard = () => {
             </div>
 
             <div
-              className="d-flex align-items-end flex-wrap w-100 col_span_2 referral_input_container"
+              className="d-flex align-items-end flex-wrap w-full col_span_2 referral_input_container"
               style={{ gap: "28px" }}
             >
               <div>
                 <label htmlFor="zip">Expiration Date</label>
                 <div
-                  className="d-flex align-items-end w-100"
+                  className="d-flex align-items-end w-full"
                   style={{ gap: "28px" }}
                 >
                   <select className="small_input" style={{ minWidth: "115px" }}>
@@ -76,7 +76,7 @@ const UpdateCreditCard = () => {
                   </select>
                 </div>
               </div>
-              <div className="w-100" style={{ maxWidth: "486px" }}>
+              <div className="w-full" style={{ maxWidth: "486px" }}>
                 <label htmlFor="fax_number">Fax Number</label>
                 <input name="fax_number" type="text" />
               </div>

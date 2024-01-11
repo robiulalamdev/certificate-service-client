@@ -10,7 +10,7 @@ const AccountSetting = () => {
         <p>Upload your photo</p>
       </div>
 
-      <div className="w-100 setting_hr"></div>
+      <div className="w-full setting_hr"></div>
       <form className="account_setting_form_container">
         <div className="account_setting_input_container">
           <label htmlFor="Full_name">Full name</label>

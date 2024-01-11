@@ -42,7 +42,7 @@ const AddPaymentForm = ({ formStep, setFormStep }) => {
           <label htmlFor="name_card">Name on Card</label>
           <input
             {...register("name_card")}
-            className="ca_input w-100"
+            className="ca_input w-full"
             type="text"
           />
         </div>
@@ -50,7 +50,7 @@ const AddPaymentForm = ({ formStep, setFormStep }) => {
           <label htmlFor="billing_phone">Billing Phone</label>
           <input
             {...register("billing_phone")}
-            className="ca_input w-100"
+            className="ca_input w-full"
             type="text"
           />
         </div>
@@ -60,7 +60,7 @@ const AddPaymentForm = ({ formStep, setFormStep }) => {
           <label htmlFor="billing_address_number">Billing Address Number</label>
           <input
             {...register("billing_address_number")}
-            className="ca_input w-100"
+            className="ca_input w-full"
             type="number"
           />
         </div>
@@ -68,7 +68,7 @@ const AddPaymentForm = ({ formStep, setFormStep }) => {
           <label htmlFor="billing_zip_code">Billing Zip Code</label>
           <input
             {...register("billing_zip_code")}
-            className="ca_input w-100"
+            className="ca_input w-full"
             style={{ maxWidth: "278px" }}
             type="text"
           />
@@ -79,7 +79,7 @@ const AddPaymentForm = ({ formStep, setFormStep }) => {
           <label htmlFor="billing_zip_code">Billing Zip Code</label>
           <input
             {...register("billing_zip_code")}
-            className="ca_input w-100"
+            className="ca_input w-full"
             type="number"
           />
         </div>
@@ -110,23 +110,23 @@ const AddPaymentForm = ({ formStep, setFormStep }) => {
           <div className="d-flex gap-3">
             <input
               {...register("expiration_date")}
-              className="ca_input w-100"
+              className="ca_input w-full"
               type="date"
               style={{ maxWidth: "115px" }}
             />
             <input
               {...register("month")}
-              className="ca_input w-100"
+              className="ca_input w-full"
               type="month"
               style={{ maxWidth: "115px" }}
             />
           </div>
         </div>
-        <div className="ca_input_container flex-grow w-100">
+        <div className="ca_input_container flex-grow w-full">
           <label htmlFor="ccs_csv_security_code">CCS/CSV Security Code</label>
           <input
             {...register("ccs_csv_security_code")}
-            className="ca_input w-100"
+            className="ca_input w-full"
             type="text"
             style={{ maxWidth: "486px" }}
           />

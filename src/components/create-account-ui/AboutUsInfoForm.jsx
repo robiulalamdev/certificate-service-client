@@ -53,7 +53,7 @@ const AboutUsInfoForm = ({ formStep, setFormStep }) => {
         <Select
           {...register("please_select_below")}
           onChange={setSelectedOption}
-          className="ca_input w-100"
+          className="ca_input w-full"
           options={options}
         />
       </div>
@@ -64,7 +64,7 @@ const AboutUsInfoForm = ({ formStep, setFormStep }) => {
         </label>
         <textarea
           {...register("about")}
-          className="ca_input w-100"
+          className="ca_input w-full"
           type="text"
           style={{ minHeight: "177.193px" }}
         />

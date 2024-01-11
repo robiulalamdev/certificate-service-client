@@ -44,10 +44,10 @@ const ReferralProgramme = () => {
               <input name="address" type="text" />
             </div>
             <div
-              className="d-flex align-items-end referral_input_container w-100"
+              className="d-flex align-items-end referral_input_container w-full"
               style={{ gap: "28px" }}
             >
-              <div className="w-100">
+              <div className="w-full">
                 <label htmlFor="city">City</label>
                 <input name="city" type="text" />
               </div>
@@ -77,9 +77,9 @@ const ReferralProgramme = () => {
           </div>
         </section>
 
-        <section className="email_contact_section w-100">
+        <section className="email_contact_section w-full">
           <h1 className="signature_block_title">E-mail contacts</h1>
-          <div className="referral_inputs w-100">
+          <div className="referral_inputs w-full">
             <div className="referral_input_container">
               <label htmlFor="primary_account_email">
                 Primary account email
@@ -101,11 +101,11 @@ const ReferralProgramme = () => {
           </div>
         </section>
 
-        <section className="email_contact_section w-100">
+        <section className="email_contact_section w-full">
           <h1 className="signature_block_title">
             EMERGENCY CONTACT INFORMATION (FOR JOB CONTROL)
           </h1>
-          <div className="referral_inputs w-100">
+          <div className="referral_inputs w-full">
             <div className="referral_input_container">
               <label htmlFor="your_name">Your name</label>
               <input name="your_name" type="text" />
@@ -140,10 +140,10 @@ const ReferralProgramme = () => {
               <input name="address" type="text" />
             </div>
             <div
-              className="d-flex align-items-end referral_input_container w-100"
+              className="d-flex align-items-end referral_input_container w-full"
               style={{ gap: "28px" }}
             >
-              <div className="w-100">
+              <div className="w-full">
                 <label htmlFor="city">City</label>
                 <input name="city" type="text" />
               </div>

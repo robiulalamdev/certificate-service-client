@@ -21,7 +21,7 @@ const ForgotPassword = () => {
       {step === 1 && (
         <form
           onSubmit={handleSubmit(handlePassword)}
-          className="forgot_pass_container w-100 h-100 bg-white"
+          className="forgot_pass_container w-full h-100 bg-white"
         >
           <h1>Forgot Password</h1>
           <p className="pb-4">
@@ -48,7 +48,7 @@ const ForgotPassword = () => {
         </form>
       )}
       {step === 2 && (
-        <div className="forgot_pass_container w-100 h-100 bg-white">
+        <div className="forgot_pass_container w-full h-100 bg-white">
           <h1>Check your Email</h1>
           <p className="pb-4">
             We have sent an email with password reset information to

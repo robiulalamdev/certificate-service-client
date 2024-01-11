@@ -65,7 +65,7 @@ const AccountContactInfoForm = ({ formStep, setFormStep }) => {
           <label htmlFor="first_name">First Name</label>
           <input
             {...register("first_name")}
-            className="ca_input w-100"
+            className="ca_input w-full"
             type="text"
           />
         </div>
@@ -73,7 +73,7 @@ const AccountContactInfoForm = ({ formStep, setFormStep }) => {
           <label htmlFor="last_name">Last Name</label>
           <input
             {...register("last_name")}
-            className="ca_input w-100"
+            className="ca_input w-full"
             type="text"
           />
         </div>
@@ -84,7 +84,7 @@ const AccountContactInfoForm = ({ formStep, setFormStep }) => {
           <label htmlFor="email_address">E-mail Address</label>
           <input
             {...register("email_address")}
-            className="ca_input w-100"
+            className="ca_input w-full"
             type="email"
           />
         </div>
@@ -92,7 +92,7 @@ const AccountContactInfoForm = ({ formStep, setFormStep }) => {
           <label htmlFor="cell_Phone">Cell Phone</label>
           <input
             {...register("cell_Phone")}
-            className="ca_input w-100"
+            className="ca_input w-full"
             type="number"
           />
         </div>
@@ -102,7 +102,7 @@ const AccountContactInfoForm = ({ formStep, setFormStep }) => {
         <Select
           {...register("business_category")}
           onChange={setSelectedOption}
-          className="ca_input w-100"
+          className="ca_input w-full"
           options={options}
         />
       </div>
@@ -111,13 +111,13 @@ const AccountContactInfoForm = ({ formStep, setFormStep }) => {
           <label htmlFor="direct_office_phone">Direct Office Phone</label>
           <input
             {...register("direct_office_phone")}
-            className="ca_input w-100"
+            className="ca_input w-full"
             type="text"
           />
         </div>
         <div className="ca_input_container col-md-6 pe-0">
           <label htmlFor="ext">EXT.</label>
-          <input {...register("ext")} className="ca_input w-100" type="text" />
+          <input {...register("ext")} className="ca_input w-full" type="text" />
         </div>
       </div>
       <div

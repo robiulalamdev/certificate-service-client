@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SMFStep1 from "../../components/start-mailing-forms/SMFStep1";
 import "../../styles/startMailingForm.css";
 import SMFStep2 from "../../components/start-mailing-forms/SMFStep2";
@@ -43,6 +43,7 @@ const StartMailingForm = () => {
   const handleSave = (data) => {
     console.log(data);
   };
+
   return (
     <div className="container mx-auto pb-5" style={{ minHeight: "100vh" }}>
       {/* {step > 1 && (

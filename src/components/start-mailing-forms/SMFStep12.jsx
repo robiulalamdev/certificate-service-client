@@ -1,7 +1,17 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import { Link } from "react-router-dom";
 
 /* eslint-disable react/no-unescaped-entities */
-const SMFStep12 = () => {
+const SMFStep12 = ({
+  register,
+  control,
+  setValue,
+  setError,
+  setFocus,
+  errors,
+  watch,
+}) => {
   return (
     <div className="container mx-auto">
       <div className="mt-[60px]">
@@ -20,7 +30,15 @@ const SMFStep12 = () => {
         </div>
 
         <div className="flex items-start gap-[7px] text-[#001B33] text-[18px] md:text-[30px] font-semibold font-outfit mt-[54px]">
-          <input className="min-w-[34px] min-h-[34px] mt-2" type="checkbox" />
+          <input
+            {...register("agree_user_agreement", {
+              required: true,
+            })}
+            onChange={(e) => setValue("agree_user_agreement", e.target.checked)}
+            required
+            className="min-w-[34px] min-h-[34px] mt-2"
+            type="checkbox"
+          />
           <div>
             <p>
               You authorize this mailing project to go out via USPS first class
@@ -51,6 +69,7 @@ const SMFStep12 = () => {
             Upload Mailing Project
           </button>
           <button
+            onClick={() => window.location.reload()}
             className="max-w-[153px] w-full h-[49.341px] text-[#008EDE] text-[20px] border-[1px] border-[#008EDE]
           rounded-[3px]"
           >

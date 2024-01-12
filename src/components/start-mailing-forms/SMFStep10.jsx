@@ -1,12 +1,22 @@
-import {
-  Button,
-  Popover,
-  PopoverContent,
-  PopoverHandler,
-} from "@material-tailwind/react";
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
+
+import { useEffect } from "react";
+import { Controller } from "react-hook-form";
 
 /* eslint-disable react/no-unescaped-entities */
-const SMFStep10 = () => {
+const SMFStep10 = ({
+  register,
+  control,
+  setValue,
+  setError,
+  setFocus,
+  errors,
+  watch,
+}) => {
+  useEffect(() => {
+    setValue("service_level", "Normal");
+  }, []);
   return (
     <div className="container mx-auto">
       <div className="mt-[60px]">
@@ -36,28 +46,51 @@ const SMFStep10 = () => {
       <h1 className="text-[#001B33] text-[40px] font-semibold leading-[48px] font-outfit mt-[60px]">
         CHOOSE YOUR MAIL OUTPUT SERVICE LEVEL:
       </h1>
-      <div className="flex items-start gap-[7px] text-[#001B33] text-[18px] md:text-[40px] font-semibold font-outfit mt-[54px]">
-        <input className="size-[34px] mt-2" type="radio" />
-        <div>
-          <p>NORMAL (received prior to Noon PST)</p>
-          <p className="text-[#001B33] text-xl leading-[32px] font-normal">
-            If received prior to noon PST, otherwise, will be sent the next
-            business day. Billing is at your normal print rate.
-          </p>
-        </div>
-      </div>
-      <div className="flex items-start gap-[7px] text-[#001B33] text-[18px] md:text-[40px] font-semibold font-outfit mt-[54px]">
-        <input className="size-[34px] mt-2" type="radio" />
-        <div>
-          <p>RUSH (received between Noon and 4 p.m. PST)</p>
-          <p className="text-[#001B33] text-xl leading-[32px] font-normal max-w-[837px]">
-            This job must go out today regardless of the noon cutoff time. You
-            understand you will be billed at the RUSH PRIORITY charge of 25
-            cents per page and you will pay full postage. THERE ARE NO REFUNDS
-            FOR CANCELLED JOBS!
-          </p>
-        </div>
-      </div>
+
+      <Controller
+        name="service_level"
+        control={control}
+        render={({ field }) => (
+          <>
+            <div className="flex items-start gap-[7px] text-[#001B33] text-[18px] md:text-[40px] font-semibold font-outfit mt-[54px]">
+              <input
+                onChange={() => {
+                  setValue("service_level", "Normal");
+                }}
+                checked={watch("service_level") === "Normal"}
+                className="size-[34px] mt-2"
+                type="radio"
+              />
+              <div>
+                <p>NORMAL (received prior to Noon PST)</p>
+                <p className="text-[#001B33] text-xl leading-[32px] font-normal">
+                  If received prior to noon PST, otherwise, will be sent the
+                  next business day. Billing is at your normal print rate.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start gap-[7px] text-[#001B33] text-[18px] md:text-[40px] font-semibold font-outfit mt-[54px]">
+              <input
+                onChange={() => {
+                  setValue("service_level", "Rush");
+                }}
+                checked={watch("service_level") === "Rush"}
+                className="size-[34px] mt-2"
+                type="radio"
+              />
+              <div>
+                <p>RUSH (received between Noon and 4 p.m. PST)</p>
+                <p className="text-[#001B33] text-xl leading-[32px] font-normal max-w-[837px]">
+                  This job must go out today regardless of the noon cutoff time.
+                  You understand you will be billed at the RUSH PRIORITY charge
+                  of 25 cents per page and you will pay full postage. THERE ARE
+                  NO REFUNDS FOR CANCELLED JOBS!
+                </p>
+              </div>
+            </div>
+          </>
+        )}
+      />
 
       <div className="mt-[60px] text-xl leading-[32px] text-[#001B33] font-outfit">
         <p>

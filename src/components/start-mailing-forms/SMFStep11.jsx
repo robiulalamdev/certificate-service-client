@@ -1,12 +1,13 @@
-import {
-  Button,
-  Popover,
-  PopoverContent,
-  PopoverHandler,
-} from "@material-tailwind/react";
-
 /* eslint-disable react/no-unescaped-entities */
-const SMFStep11 = () => {
+const SMFStep11 = ({
+  register,
+  control,
+  setValue,
+  setError,
+  setFocus,
+  errors,
+  watch,
+}) => {
   return (
     <div className="container mx-auto">
       <div className="mt-[60px]">
@@ -43,7 +44,14 @@ const SMFStep11 = () => {
           Custom Work Request: (Limit 144 characters)
         </h1>
         <div className="max-w-[1005px] mx-auto">
-          <textarea className="w-full min-h-[324.156px] rounded-[22.718px] bg-[#EEE] mt-[20px]"></textarea>
+          <textarea
+            {...register("special_work_requests.custom_work_request", {
+              required: true,
+            })}
+            required
+            maxLength={144}
+            className="w-full min-h-[324.156px] rounded-[22.718px] bg-[#EEE] mt-[20px]"
+          ></textarea>
           <div className="grid md:grid-cols-2 gap-x-[33px] mt-[59px]">
             <div>
               <label
@@ -53,6 +61,10 @@ const SMFStep11 = () => {
                 phone number
               </label>
               <input
+                {...register("special_work_requests.phone_number", {
+                  required: true,
+                })}
+                required
                 type="number"
                 placeholder="(555) 555-1212"
                 className="placeholder:text-[#D9D9D9] h-[47px] w-full bg-[#F7F7F7] border-[0.5px] border-black rounded-[5px] mt-[5px] px-2"
@@ -66,14 +78,27 @@ const SMFStep11 = () => {
                 Your Name for when we call
               </label>
               <input
-                type="number"
-                placeholder="(555) 555-1212"
+                {...register("special_work_requests.name", {
+                  required: true,
+                })}
+                required
+                type="text"
+                placeholder=""
                 className="placeholder:text-[#D9D9D9] h-[47px] w-full bg-[#F7F7F7] border-[0.5px] border-black rounded-[5px] mt-[5px] px-2"
               />
             </div>
           </div>
           <div className="flex items-center gap-[7px] text-[#001B33] text-[18px] md:text-[40px] font-semibold font-outfit mt-[18px]">
-            <input className="size-[34px]" type="checkbox" />
+            <input
+              {...register("special_work_requests.ok_to_text", {
+                required: false,
+              })}
+              onChange={(e) =>
+                setValue("special_work_requests.ok_to_text", e.target.checked)
+              }
+              className="size-[34px]"
+              type="checkbox"
+            />
             <p className="text-[#001B33] text-xl font-semibold uppercase">
               Ok to Text
             </p>

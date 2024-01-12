@@ -1,9 +1,3 @@
-import {
-  Button,
-  Popover,
-  PopoverContent,
-  PopoverHandler,
-} from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 
 /* eslint-disable react/no-unescaped-entities */
@@ -16,7 +10,10 @@ const SMFStep12 = () => {
             User Agreement
           </h1>
           <Link to="/start-mailing/user-agreement">
-            <button className="max-w-[384.289px] px-1 w-full h-[49.341px] bg-[#0055A3] rounded-[2.847px] text-white text-[28.466px]">
+            <button
+              type="button"
+              className="max-w-[384.289px] px-1 w-full h-[49.341px] bg-[#0055A3] rounded-[2.847px] text-white text-[28.466px]"
+            >
               Read The User Agreement
             </button>
           </Link>

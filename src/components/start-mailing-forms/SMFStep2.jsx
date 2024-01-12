@@ -1,12 +1,26 @@
-import { useState } from "react";
-import { iRadioIn, iRadioOut } from "../../utils/icons";
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 
 import img1 from "../../assets/images/start-mailing/radio1.png";
 import img2 from "../../assets/images/start-mailing/radio2.png";
 import img3 from "../../assets/images/start-mailing/radio3.png";
+import { Controller } from "react-hook-form";
 
-const SMFStep2 = () => {
-  const [radio1, setRadio1] = useState(false);
+const items = [
+  "i have already reduced the documents prior to upload!",
+  "print documents one page per side of sheet",
+  "print documents two pages perside of sheet",
+];
+
+const SMFStep2 = ({
+  register,
+  control,
+  setValue,
+  setError,
+  setFocus,
+  errors,
+  watch,
+}) => {
   return (
     <div>
       <h1 className="smf2_title">HOW SHOULD WE PRINT YOUR DOCUMENTS?</h1>
@@ -21,38 +35,46 @@ const SMFStep2 = () => {
       </p>
 
       <div className="smf2_second_section">
-        <div className="smf2_radio_container">
-          <div onClick={() => setRadio1(!radio1)} className="">
-            {radio1 ? iRadioIn : iRadioOut}
-          </div>
-          <div>
-            <h1>I HAVE ALREADY REDUCED THE DOCUMENTS PRIOR TO UPLOAD!</h1>
-            <p>THANK YOU FOR MAKING THAT EXTRA EFFORT!</p>
-            <img src={img1} alt="" />
-          </div>
-        </div>
-        <div className="smf2_radio_container">
-          <div onClick={() => setRadio1(!radio1)} className="">
-            {radio1 ? iRadioIn : iRadioOut}
-          </div>
-          <div>
-            <h1>PRINT DOCUMENTS ONE PAGE PER SIDE OF SHEET</h1>
-            <p>STANDARD SETTING</p>
-            <img src={img2} alt="" />
-          </div>
-        </div>
-        <div className="smf2_radio_container">
-          <div onClick={() => setRadio1(!radio1)} className="">
-            {radio1 ? iRadioIn : iRadioOut}
-          </div>
-          <div>
-            <h1>PRINT DOCUMENTS TWO PAGES PERSIDE OF SHEET</h1>
-            <p>
-              SAVE POSTAGE EXPENSE BY HAVING US REDUCE THE DOCUMENTS FOR YOU!
-            </p>
-            <img src={img3} alt="" />
-          </div>
-        </div>
+        <Controller
+          name="print_documents"
+          control={control}
+          render={({ field }) =>
+            items.map((item, index) => (
+              <div key={index} className="smf2_radio_container">
+                <input
+                  type="radio"
+                  value={item}
+                  checked={field.value === item}
+                  onChange={() => field.onChange(item)}
+                  className="min-w-[29.385px] min-h-[29.385px] cursor-pointer"
+                />
+                <div>
+                  <h1 className="uppercase">{item}</h1>
+                  {index === 0 && (
+                    <p>THANK YOU FOR MAKING THAT EXTRA EFFORT!</p>
+                  )}
+                  {index === 1 && <p>STANDARD SETTING</p>}
+                  {index === 2 && (
+                    <p>
+                      SAVE POSTAGE EXPENSE BY HAVING US REDUCE THE DOCUMENTS FOR
+                      YOU!
+                    </p>
+                  )}
+                  <img
+                    src={
+                      (index === 0 && img1) ||
+                      (index === 1 && img2) ||
+                      (index === 2 && img3)
+                    }
+                    alt=""
+                  />
+                </div>
+              </div>
+            ))
+          }
+          {...register("print_documents", { required: false })}
+        />
+
         <div className="smf2_radio_container">
           <div className="print_pricing">
             <p>

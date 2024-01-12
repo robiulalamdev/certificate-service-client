@@ -1,9 +1,24 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
 
 import { Link } from "react-router-dom";
 import img from "../../assets/images/start-mailing/f7_img1.png";
 
-const SMFStep7 = () => {
+const SMFStep7 = ({
+  register,
+  control,
+  setValue,
+  setError,
+  setFocus,
+  errors,
+  watch,
+  setOwnMailingFile,
+  ownMailingFile,
+}) => {
+  // {...register("user_supplied_address_list.own_mailing_list_file", {
+  //   required: false,
+  // })}
   return (
     <div className="container mx-auto">
       <h1 className="smf4_title mt-4">
@@ -19,7 +34,19 @@ const SMFStep7 = () => {
       </p>
 
       <div className="flex items-center gap-[7px] text-[#0055A3] text-[18px] md:text-[30px] font-semibold font-outfit mt-[68px]">
-        <input className="size-[34px]" type="checkbox" />
+        <input
+          {...register("user_supplied_address_list.mailing_list_attaching", {
+            required: false,
+          })}
+          onChange={(e) =>
+            setValue(
+              "user_supplied_address_list.mailing_list_attaching",
+              e.target.checked
+            )
+          }
+          className="size-[34px] cursor-pointer"
+          type="checkbox"
+        />
         <p>
           PLEASE USE THE USER SUPPLIED MAILING LIST THAT I AM ATTACHING BELOW.
         </p>
@@ -34,13 +61,17 @@ const SMFStep7 = () => {
               Choose File
             </p>
             <input
+              onChange={(e) => setOwnMailingFile(e.target.files[0])}
               type="file"
+              accept=".pdf, .doc, .csv, .txt"
+              multiple={false}
               className="absolute top-0 left-0 bottom-0 right-0 w-full h-full opacity-0"
             />
           </div>
 
           <div>
             <input
+              value={ownMailingFile?.name}
               type="text"
               className="max-w-[979px] h-[53px] outline-none bg-[#EEE] border-[0.657px] border-[#001B33] rounded-[6.565px] px-2 text-black text-sm w-full"
             />

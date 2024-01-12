@@ -1,12 +1,30 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import {
   Button,
   Popover,
   PopoverContent,
   PopoverHandler,
 } from "@material-tailwind/react";
+import { useEffect } from "react";
+import { Controller } from "react-hook-form";
 
 /* eslint-disable react/no-unescaped-entities */
-const SMFStep9 = () => {
+const SMFStep9 = ({
+  register,
+  control,
+  setValue,
+  setError,
+  setFocus,
+  errors,
+  watch,
+}) => {
+  useEffect(() => {
+    setValue("envelope_in_your_mailing.add_postage", "NO");
+  }, []);
+
+  const isTrue =
+    watch("envelope_in_your_mailing.add_postage") === "Yes" ? true : false;
   return (
     <div className="container mx-auto">
       <h1 className="smf4_title mt-4">
@@ -19,7 +37,19 @@ const SMFStep9 = () => {
         that you would like us to include an return envelope
       </p>
       <div className="flex items-start gap-[7px] text-[#0055A3] text-[18px] md:text-[30px] font-semibold font-outfit mt-[68px]">
-        <input className="size-[34px]" type="checkbox" />
+        <input
+          {...register("envelope_in_your_mailing.information_provide", {
+            required: false,
+          })}
+          onChange={(e) =>
+            setValue(
+              "envelope_in_your_mailing.information_provide",
+              e.target.checked
+            )
+          }
+          className="size-[34px]"
+          type="checkbox"
+        />
         <p>
           YES! PLEASE INSERT A #9 ENVELOPE WITH THE RETURN INFORMATION LISTED &
           PROVIDED BELOW.
@@ -29,17 +59,47 @@ const SMFStep9 = () => {
       <h1 className="text-[#001B33] text-[40px] font-semibold leading-[48px] font-outfit mt-[60px]">
         WOULD YOU LIKE TO ADD POSTAGE TO THE RETURN ENVELOPE? (NOT RECOMMENDED)
       </h1>
-      <div className="flex items-start gap-[7px] text-[#001B33] text-[18px] md:text-[40px] font-semibold font-outfit mt-[54px]">
-        <input className="size-[34px] mt-2" type="radio" />
-        <p>NO, RECIPIENT WILL AFFIX THEIR OWN FIRST CLASS POSTAGE.</p>
-      </div>
-      <div className="flex items-start gap-[7px] text-[#001B33] text-[18px] md:text-[40px] font-semibold font-outfit mt-[54px]">
-        <input className="size-[34px] mt-2" type="radio" />
-        <p>
-          YES! PLEASE ADD FIRST CLASS STAMP TO THE #9 RETURN <br /> ENVELOPE
-          <span className="text-[#DA170B] text-xl"> (NOT RECOMMENDED)</span>
-        </p>
-      </div>
+
+      <Controller
+        name="envelope_in_your_mailing.add_postage"
+        control={control}
+        defaultValue="Exclude the United States Bankruptcy Court"
+        render={({ field }) => (
+          <>
+            <div className="flex items-start gap-[7px] text-[#001B33] text-[18px] md:text-[40px] font-semibold font-outfit mt-[54px]">
+              <input
+                onChange={() => {
+                  setValue("envelope_in_your_mailing.add_postage", "No");
+                }}
+                checked={watch("envelope_in_your_mailing.add_postage") === "No"}
+                className="size-[34px] mt-2"
+                type="radio"
+              />
+              <p>NO, RECIPIENT WILL AFFIX THEIR OWN FIRST CLASS POSTAGE.</p>
+            </div>
+            <div className="flex items-start gap-[7px] text-[#001B33] text-[18px] md:text-[40px] font-semibold font-outfit mt-[54px]">
+              <input
+                onChange={() => {
+                  setValue("envelope_in_your_mailing.add_postage", "Yes");
+                }}
+                checked={
+                  watch("envelope_in_your_mailing.add_postage") === "Yes"
+                }
+                className="size-[34px] mt-2"
+                type="radio"
+              />
+              <p>
+                YES! PLEASE ADD FIRST CLASS STAMP TO THE #9 RETURN <br />{" "}
+                ENVELOPE
+                <span className="text-[#DA170B] text-xl">
+                  {" "}
+                  (NOT RECOMMENDED)
+                </span>
+              </p>
+            </div>
+          </>
+        )}
+      />
 
       <div className="max-w-[1161px] w-full mx-auto min-h-[583px] px-[29px] py-[32px] border-[1px] border-black bg-[#F8F8F8] rounded-[36px] mt-[60px]">
         <div className="flex flex-col-reverse md:flex-row justify-between">
@@ -50,19 +110,35 @@ const SMFStep9 = () => {
               </h1>
             </div>
             <input
-              type="text"
+              {...register("envelope_in_your_mailing.return_envelope.from_1", {
+                required: isTrue,
+              })}
+              type="email"
+              required={isTrue}
               className="border-b-[1px] outline-none bg-transparent h-[35px] border-[#001B33] max-w-[220px] block"
             />
             <input
-              type="text"
+              {...register("envelope_in_your_mailing.return_envelope.from_2", {
+                required: isTrue,
+              })}
+              type="email"
+              required={isTrue}
               className="border-b-[1px] outline-none bg-transparent h-[35px] border-[#001B33] max-w-[220px] block"
             />
             <input
-              type="text"
+              {...register("envelope_in_your_mailing.return_envelope.from_3", {
+                required: isTrue,
+              })}
+              type="email"
+              required={isTrue}
               className="border-b-[1px] outline-none bg-transparent h-[35px] border-[#001B33] max-w-[220px] block"
             />
             <input
-              type="text"
+              {...register("envelope_in_your_mailing.return_envelope.from_4", {
+                required: isTrue,
+              })}
+              type="email"
+              required={isTrue}
               className="border-b-[1px] outline-none bg-transparent h-[35px] border-[#001B33] max-w-[220px] block"
             />
           </div>
@@ -81,7 +157,11 @@ const SMFStep9 = () => {
               Name
             </label>
             <input
+              {...register("envelope_in_your_mailing.return_envelope.name", {
+                required: isTrue,
+              })}
               type="text"
+              required={isTrue}
               className="rounded-[4.817px] bg-transparent h-[45.583px] outline-none border-[0.482px] border-black px-2 w-full"
             />
           </div>
@@ -94,7 +174,14 @@ const SMFStep9 = () => {
                 Office
               </label>
               <input
+                {...register(
+                  "envelope_in_your_mailing.return_envelope.office",
+                  {
+                    required: isTrue,
+                  }
+                )}
                 type="text"
+                required={isTrue}
                 className="rounded-[4.817px] bg-transparent h-[45.583px] outline-none border-[0.482px] border-black px-2 w-full"
               />
             </div>
@@ -106,7 +193,14 @@ const SMFStep9 = () => {
                 Address
               </label>
               <input
+                {...register(
+                  "envelope_in_your_mailing.return_envelope.address",
+                  {
+                    required: isTrue,
+                  }
+                )}
                 type="text"
+                required={isTrue}
                 className="rounded-[4.817px] bg-transparent h-[45.583px] outline-none border-[0.482px] border-black px-2 w-full"
               />
             </div>
@@ -120,30 +214,53 @@ const SMFStep9 = () => {
                 City
               </label>
               <input
+                {...register("envelope_in_your_mailing.return_envelope.city", {
+                  required: isTrue,
+                })}
                 type="text"
+                required={isTrue}
                 className="rounded-[4.817px] bg-transparent h-[45.583px] outline-none border-[0.482px] border-black px-2 w-full"
               />
             </div>
-            <Popover placement="bottom-start">
-              <PopoverHandler>
-                <Button
-                  className={`w-full h-[47px] bg-[#F7F7F7] outline-none border-[0.349px] font-normal border-black rounded-[4.817px] px-2 shadow-none hover:shadow-none normal-case text-left text-[18px] py-0 text-black`}
-                >
-                  <span className="text-[#979CA5] normal-case">Select</span>
-                </Button>
-              </PopoverHandler>
-              <PopoverContent className="grid grid-cols-1 max-w-[115px] max-h-[350px] overflow-y-auto w-full p-0 shadow-none">
-                {["a", "b"]?.map((subCate, i) => (
-                  <Button
-                    key={i}
-                    className="h-8 bg-white text-black hover:!bg-primary rounded-none hover:!text-white shadow-none border-none normal-case text-left outline-none px-3 py-0"
-                  >
-                    {subCate}
-                  </Button>
-                ))}
-              </PopoverContent>
-            </Popover>
+            <Controller
+              name="envelope_in_your_mailing.return_envelope.state"
+              control={control}
+              render={({ field }) => (
+                <Popover placement="bottom-start">
+                  <PopoverHandler>
+                    <Button
+                      className={`w-full h-[47px] bg-[#F7F7F7] outline-none border-[0.349px] font-normal border-black rounded-[4.817px] px-2 shadow-none hover:shadow-none normal-case text-left text-[18px] py-0 text-black`}
+                    >
+                      {watch(
+                        "envelope_in_your_mailing.return_envelope.state"
+                      ) || <span className="text-[#979CA5]">Select</span>}
+                    </Button>
+                  </PopoverHandler>
+                  <PopoverContent className="grid grid-cols-1 max-w-[115px] max-h-[350px] overflow-y-auto w-full p-0 shadow-none">
+                    {["a", "b"]?.map((subCate, i) => (
+                      <Button
+                        onClick={() =>
+                          setValue(
+                            "envelope_in_your_mailing.return_envelope.state",
+                            subCate
+                          )
+                        }
+                        key={i}
+                        className="h-8 bg-white text-black hover:!bg-primary rounded-none hover:!text-white shadow-none border-none normal-case text-left outline-none px-3 py-0"
+                      >
+                        {subCate}
+                      </Button>
+                    ))}
+                  </PopoverContent>
+                </Popover>
+              )}
+            />
+
             <input
+              {...register("envelope_in_your_mailing.return_envelope.zip", {
+                required: isTrue,
+              })}
+              required={isTrue}
               type="text"
               placeholder="Zip"
               className="rounded-[4.817px] bg-transparent h-[45.583px] outline-none border-[0.482px] border-black px-2 w-full"

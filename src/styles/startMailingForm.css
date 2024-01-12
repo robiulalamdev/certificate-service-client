@@ -116,6 +116,9 @@
   outline: none;
   padding: 0 10px;
 }
+.smf_input_container .error {
+  border: 0.5px solid red;
+}
 .w331 {
   min-width: 331px;
 }

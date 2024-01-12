@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import {
   Button,
   Popover,
@@ -7,8 +9,15 @@ import {
 import { useState } from "react";
 import img from "../../assets/images/global/barcode.png";
 
-const SMFStep5 = () => {
-  const [radio1, setRadio1] = useState(false);
+const SMFStep5 = ({
+  register,
+  control,
+  setValue,
+  setError,
+  setFocus,
+  errors,
+  watch,
+}) => {
   return (
     <div className="container mx-auto">
       <h1 className="smf4_title mt-4">
@@ -29,7 +38,11 @@ const SMFStep5 = () => {
                 Return Address name
               </label>
               <input
+                {...register("return_address.return_address_name", {
+                  required: true,
+                })}
                 type="text"
+                required
                 className="max-w-[401px] w-full h-[33px] outline-none border-[0.349px] border-black bg-[#F7F7F7] rounded-[3.384px] px-2"
               />
             </div>
@@ -42,6 +55,10 @@ const SMFStep5 = () => {
                   Firm name
                 </label>
                 <input
+                  {...register("return_address.firm_name", {
+                    required: true,
+                  })}
+                  required
                   type="text"
                   className="w-full h-[33px] outline-none border-[0.349px] border-black bg-[#F7F7F7] rounded-[3.384px] px-2"
                 />
@@ -54,6 +71,10 @@ const SMFStep5 = () => {
                   Address
                 </label>
                 <input
+                  {...register("return_address.address", {
+                    required: true,
+                  })}
+                  required
                   type="text"
                   className="w-full h-[33px] outline-none border-[0.349px] border-black bg-[#F7F7F7] rounded-[3.384px] px-2"
                 />
@@ -68,6 +89,10 @@ const SMFStep5 = () => {
                   City
                 </label>
                 <input
+                  {...register("return_address.city", {
+                    required: true,
+                  })}
+                  required
                   type="text"
                   className="md:max-w-[112.997px] w-full h-[33px] outline-none border-[0.349px] border-black bg-[#F7F7F7] rounded-[3.384px] px-2"
                 />
@@ -77,12 +102,15 @@ const SMFStep5 = () => {
                   <Button
                     className={`md:max-w-[80.214px] w-full h-[33px] outline-none border-[0.349px] border-black bg-[#F7F7F7] rounded-[3.384px] px-2 shadow-none hover:shadow-none normal-case text-left font-medium text-[18px] py-0 text-black`}
                   >
-                    <span className="text-[#979CA5]">Select</span>
+                    {watch("return_address.state") || (
+                      <span className="text-[#979CA5]">Select</span>
+                    )}
                   </Button>
                 </PopoverHandler>
                 <PopoverContent className="grid grid-cols-1 max-w-[115px] max-h-[350px] overflow-y-auto w-full p-0 shadow-none">
                   {["a", "b"]?.map((subCate, i) => (
                     <Button
+                      onClick={() => setValue("return_address.state", subCate)}
                       key={i}
                       className="h-8 bg-white text-black hover:!bg-primary rounded-none hover:!text-white shadow-none border-none normal-case text-left outline-none px-3 py-0"
                     >
@@ -92,6 +120,10 @@ const SMFStep5 = () => {
                 </PopoverContent>
               </Popover>
               <input
+                {...register("return_address.zip", {
+                  required: true,
+                })}
+                required
                 type="text"
                 placeholder="Zip"
                 className="md:max-w-[80.214px] w-full h-[33px] outline-none border-[0.349px] border-black bg-[#F7F7F7] rounded-[3.384px] px-2"

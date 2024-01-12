@@ -1,13 +1,16 @@
-import React from "react";
+/* eslint-disable react/prop-types */
 import img1 from "../../../assets/images/dashboard/overview/profile.png";
+import { useGetNotificationsQuery } from "../../../redux/features/notification/notificationApi";
 import { iNotify } from "../../../utiles/icons";
 
-const OverviewNotifyUser = () => {
+const OverviewNotifyUser = ({ user }) => {
+  const { data } = useGetNotificationsQuery();
+  console.log(data);
   return (
     <>
       <div className="profile_part">
         <img src={img1} alt="" />
-        <h1>Murad Abir</h1>
+        <h1>{user?.full_name}</h1>
       </div>
       <div className="hr_div"></div>
       <div className="user_notify_header">
@@ -16,56 +19,9 @@ const OverviewNotifyUser = () => {
       </div>
       <div className="hr_div"></div>
       <div className="user_notifications">
-        <p>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using
-        </p>
-        <p>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using
-        </p>
-        <p>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using
-        </p>
-        <p>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using
-        </p>
-        <p>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using
-        </p>
-        <p>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using
-        </p>
-        <p>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using
-        </p>
-        <p>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using
-        </p>
-        <p>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using
-        </p>
-        <p>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using
-        </p>
+        {data?.data?.map((item, index) => (
+          <p key={index}>{item?.description}</p>
+        ))}
       </div>
     </>
   );

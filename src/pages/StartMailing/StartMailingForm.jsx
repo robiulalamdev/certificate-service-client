@@ -14,9 +14,13 @@ import SMFStep10 from "../../components/start-mailing-forms/SMFStep10";
 import SMFStep11 from "../../components/start-mailing-forms/SMFStep11";
 import SMFStep12 from "../../components/start-mailing-forms/SMFStep12";
 import { useForm } from "react-hook-form";
+import { useAddJobMutation } from "../../redux/features/job/jobApi";
+import { toast } from "react-toastify";
+import { SpinnerCircularFixed } from "spinners-react";
 
 const StartMailingForm = () => {
-  // const [step, setStep] = useState(1);
+  const [addJob] = useAddJobMutation();
+  const [isLoading, setIsLoading] = useState(false);
   const {
     handleSubmit,
     register,
@@ -40,12 +44,60 @@ const StartMailingForm = () => {
   // form 7
   const [ownMailingFile, setOwnMailingFile] = useState(null);
 
-  const handleSave = (data) => {
+  const handleSave = async (data) => {
     console.log(data);
+    setIsLoading(true);
+    const formData = new FormData();
+
+    if (document_1) {
+      formData.append("document_1", document_1);
+    }
+    if (document_2) {
+      formData.append("document_2", document_2);
+    }
+    if (document_3) {
+      formData.append("document_3", document_3);
+    }
+    if (document_4) {
+      formData.append("document_4", document_4);
+    }
+    if (document_5) {
+      formData.append("document_5", document_5);
+    }
+    if (document_6) {
+      formData.append("document_6", document_6);
+    }
+    if (ballot) {
+      formData.append("ballot", ballot);
+    }
+    if (proof_of_claim) {
+      formData.append("proof_of_claim", proof_of_claim);
+    }
+    if (ownMailingFile) {
+      formData.append("own_mailing_list_file", ownMailingFile);
+    }
+    if (data) {
+      formData.append("data", JSON.stringify(data));
+    }
+    const options = {
+      data: formData,
+    };
+    const result = await addJob(options);
+    // console.log(result);
+    if (result?.data?.success) {
+      toast.success("Mail Send Successfully");
+    } else {
+      toast.error("Mail Send Failed!");
+    }
+    setIsLoading(false);
   };
 
   return (
-    <div className="container mx-auto pb-5" style={{ minHeight: "100vh" }}>
+    <form
+      onSubmit={handleSubmit(handleSave)}
+      className="container mx-auto pb-5"
+      style={{ minHeight: "100vh" }}
+    >
       {/* {step > 1 && (
         <div
           className="flex justify-end"
@@ -54,10 +106,7 @@ const StartMailingForm = () => {
           <div className="smf1_cancel_upload_btn">Cancel Upload</div>
         </div>
       )} */}
-      <form
-        onSubmit={handleSubmit(handleSave)}
-        className="grid grid-cols-1 gap-y-[60px]"
-      >
+      <div className="grid grid-cols-1 gap-y-[60px]">
         <SMFStep1
           register={register}
           control={control}
@@ -185,10 +234,24 @@ const StartMailingForm = () => {
           errors={errors}
           watch={watch}
         />
-      </form>
+      </div>
 
       <div className="flex items-center justify-center w-full">
-        <button className="smf_btn">Submit</button>
+        <button
+          type="submit"
+          className="smf_btn max-w-fit px-2 flex justify-center items-center gap-2"
+        >
+          {isLoading && (
+            <SpinnerCircularFixed
+              size={25}
+              thickness={170}
+              speed={350}
+              color="white"
+              secondaryColor="rgba(124, 57, 172, 0.19)"
+            />
+          )}
+          Submit
+        </button>
         {/* {step === 11 ? (
           <button className="smf_btn">Submit</button>
         ) : (
@@ -197,7 +260,7 @@ const StartMailingForm = () => {
           </div>
         )} */}
       </div>
-    </div>
+    </form>
   );
 };
 

@@ -3,20 +3,23 @@ import React from "react";
 import "../../styles/dashboard/dashboard.css";
 import "../../styles/dashboard/dOverview.css";
 import OverviewNotifyUser from "../../components/dashboard-ui/overview-ui/OverviewNotifyUser";
-import { iJob1, iJob2, iJob3 } from "../../utiles/icons";
-import { Link } from "react-router-dom";
 
-const t1 = "<Number for their job>";
-const fromInvoice = "<Data from invoice>";
+import { Link } from "react-router-dom";
+import useAuth from "../../lib/useAuth";
+import { useGetJobsQuery } from "../../redux/features/job/jobApi";
+import JobHistoryCard from "../../components/dashboard-ui/overview-ui/JobHistoryCard";
 
 const DOverview = () => {
+  const { user } = useAuth();
+  const { data } = useGetJobsQuery();
+  // console.log(data);
   return (
     <div className="dashboard_overview">
       <div className="overview_first_half">
         <div className="overview_first_half_header">
           <div>
             <h1>WELCOME</h1>
-            <p>Welcome back, Murad!</p>
+            <p>Welcome back, {user?.full_name}!</p>
           </div>
           <Link to="/start-mailing">
             <button>Start Mailing</button>
@@ -62,84 +65,15 @@ const DOverview = () => {
             <h1>JOB HISTORY REPORT:</h1>
             <p>See All</p>
           </div>
-          <div className="job_history_body">
-            <div className="job_history_body_content">
-              <div className="order_content_titles">
-                <h1>Order Name:</h1>
-                <p>Quantity: 2 ; Cost: $302.3</p>
-                <div className="order_actions">
-                  <button>{iJob1}</button>
-                  <button>{iJob2}</button>
-                  <button>{iJob3}</button>
-                </div>
-              </div>
-              <div className="order_content_details">
-                <h1>Tracking Number: {t1}</h1>
-                <p>Envelope Count: {fromInvoice}</p>
-                <p>Page Count: {fromInvoice}</p>
-                <p>Cost: {fromInvoice}</p>
-              </div>
-              <div className="order_ds_btns">
-                <button className="d_cos_btn">Download COS</button>
-                <button className="stop_btn">Stop Job</button>
-              </div>
-              <button className="job_status_btn job_status_btn_rejected">
-                Rejected
-              </button>
-            </div>
-            <div className="job_history_body_content">
-              <div className="order_content_titles">
-                <h1>Order Name:</h1>
-                <p>Quantity: 2 ; Cost: $302.3</p>
-                <div className="order_actions">
-                  <button>{iJob1}</button>
-                  <button>{iJob2}</button>
-                  <button>{iJob3}</button>
-                </div>
-              </div>
-              <div className="order_content_details">
-                <h1>Tracking Number: {t1}</h1>
-                <p>Envelope Count: {fromInvoice}</p>
-                <p>Page Count: {fromInvoice}</p>
-                <p>Cost: {fromInvoice}</p>
-              </div>
-              <div className="order_ds_btns">
-                <button className="d_cos_btn">Download COS</button>
-                <button className="stop_btn">Stop Job</button>
-              </div>
-              <button className="job_status_btn job_status_btn_pending">
-                Pending
-              </button>
-            </div>
-            <div className="job_history_body_content">
-              <div className="order_content_titles">
-                <h1>Order Name:</h1>
-                <p>Quantity: 2 ; Cost: $302.3</p>
-                <div className="order_actions">
-                  <button>{iJob1}</button>
-                  <button>{iJob2}</button>
-                  <button>{iJob3}</button>
-                </div>
-              </div>
-              <div className="order_content_details">
-                <h1>Tracking Number: {t1}</h1>
-                <p>Envelope Count: {fromInvoice}</p>
-                <p>Page Count: {fromInvoice}</p>
-                <p>Cost: {fromInvoice}</p>
-              </div>
-              <div className="order_ds_btns">
-                <button className="d_cos_btn">Download COS</button>
-                <button className="stop_btn">Stop Job</button>
-              </div>
-              <button className="job_status_btn job_status_btn_approved">
-                Approved
-              </button>
-            </div>
+          <div className="job_history_body max-h-[300px] overflow-y-auto">
+            {data?.data?.map((job, index) => (
+              <JobHistoryCard key={index} job={job} />
+            ))}
           </div>
         </div>
       </div>
       <div className="overview_second_half">
-        <OverviewNotifyUser />
+        <OverviewNotifyUser user={user} />
       </div>
     </div>
   );

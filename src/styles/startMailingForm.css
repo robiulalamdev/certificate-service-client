@@ -196,11 +196,15 @@
 }
 
 .smf_btn {
-  width: 131px;
+  min-width: 131px;
   height: 52px;
   flex-shrink: 0;
   border-radius: 3px;
-  background: linear-gradient(269deg, #20c9ff -23.46%, #008ede 95.62%);
+  background: linear-gradient(
+    269deg,
+    #20c9ff -23.46%,
+    #008ede 95.62%
+  ) !important;
   color: #fff;
   leading-trim: both;
   text-edge: cap;

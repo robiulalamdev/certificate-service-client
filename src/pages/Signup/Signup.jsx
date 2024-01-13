@@ -104,11 +104,11 @@ const Signup = () => {
   return (
     <>
       <div
-        className="container"
+        className="max-w-[1440px] mx-auto !p-0"
         style={{ minHeight: "100vh", backgroundColor: "white" }}
       >
-        <div className="grid md:grid-cols-2">
-          <div className="auth_left_part">
+        <div className="grid lg:grid-cols-2">
+          <div className="auth_left_part hidden lg:block">
             <img className="w-full auth_side_image" src={img} alt="" />
           </div>
           <form
@@ -116,8 +116,16 @@ const Signup = () => {
             className="auth_right_part"
           >
             <div className="flex justify-center items-center  gap-4 mb-5">
-              <button className="login_btn">Log In</button>
-              <button className="signup_btn">Sign up</button>
+              <Link to="/login" className="w-full login_btn">
+                <button type="button" className="login_btn">
+                  Log In
+                </button>
+              </Link>
+              <Link to="/signup" className="w-full signup_btn">
+                <button type="button" className="signup_btn">
+                  Sign up
+                </button>
+              </Link>
             </div>
             <div className="auth_input_container w-full">
               <label htmlFor="E-MAIL">E-MAIL</label>

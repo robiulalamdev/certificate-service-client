@@ -25,7 +25,7 @@
   height: 58px;
   flex-shrink: 0;
   border-radius: 72px;
-  background: #008ede;
+  background: #008ede !important;
   box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.2);
   color: #fff;
   leading-trim: both;
@@ -43,7 +43,7 @@
   height: 58px;
   flex-shrink: 0;
   border-radius: 72px;
-  background: #fff;
+  background: #fff !important;
   color: #001b33;
   leading-trim: both;
   text-edge: cap;

@@ -50,7 +50,7 @@ const SMFStep11 = ({
             })}
             required
             maxLength={144}
-            className="w-full min-h-[324.156px] rounded-[22.718px] bg-[#EEE] mt-[20px]"
+            className="w-full min-h-[324.156px] rounded-[22.718px] bg-[#EEE] mt-[20px] p-4"
           ></textarea>
           <div className="grid md:grid-cols-2 gap-x-[33px] mt-[59px]">
             <div>

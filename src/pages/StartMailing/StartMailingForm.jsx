@@ -29,6 +29,7 @@ const StartMailingForm = () => {
     setFocus,
     control,
     watch,
+    reset,
     formState: { errors },
   } = useForm();
 
@@ -86,6 +87,8 @@ const StartMailingForm = () => {
     // console.log(result);
     if (result?.data?.success) {
       toast.success("Mail Send Successfully");
+      reset();
+      window.location.reload();
     } else {
       toast.error("Mail Send Failed!");
     }

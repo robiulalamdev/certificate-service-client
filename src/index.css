@@ -130,3 +130,8 @@ body {
   line-height: normal;
   text-transform: uppercase;
 }
+
+input[type="checkbox"],
+input[type="radio"] {
+  cursor: pointer !important;
+}

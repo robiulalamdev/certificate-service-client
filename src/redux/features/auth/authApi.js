@@ -102,7 +102,15 @@ const authApi = api.injectEndpoints({
         method: "PATCH",
         body: data,
       }),
-      invalidatesTags: ["store", "users"],
+      invalidatesTags: ["users"],
+    }),
+    updateUserInfo: builder.mutation({
+      query: ({ data }) => ({
+        url: `/users/update/info`,
+        method: "PATCH",
+        body: data,
+      }),
+      invalidatesTags: ["users"],
     }),
   }),
 });
@@ -111,6 +119,7 @@ export const {
   usePostRegisterMutation,
   usePostLoginMutation,
   useImageUpdateMutation,
+  useUpdateUserInfoMutation,
   useGetAuthQuery,
 
   usePostForgotPasswordMutation,

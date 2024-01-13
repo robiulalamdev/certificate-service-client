@@ -4,6 +4,8 @@ import { iUploadImg } from "../../../utils/icons";
 import {
   useGetAuthQuery,
   useImageUpdateMutation,
+  usePatchUserInfoByIdMutation,
+  useUpdateUserInfoMutation,
 } from "../../../redux/features/auth/authApi";
 import {
   Button,
@@ -24,6 +26,8 @@ import useInputPattern from "../../../lib/hooks/useInputPattern";
 const AccountSetting = () => {
   const { data } = useGetAuthQuery();
   const [imageUpdate, { isLoading }] = useImageUpdateMutation();
+  const [updateUserInfo, { isLoading: patchLoading }] =
+    useUpdateUserInfoMutation();
   const [imgFile, setImgFile] = useState(null);
   const { handleNumber } = useInputPattern();
 
@@ -58,13 +62,24 @@ const AccountSetting = () => {
     imgRef.current.value = null;
   };
 
-  const handleUpdate = (data) => {
-    console.log(data);
+  const handleUpdate = async (data) => {
+    const options = {
+      data: data,
+    };
+    const result = await updateUserInfo(options);
+    if (result?.data?.success) {
+      toast.success("Profile Info Update Success");
+    } else {
+      if (result?.data?.type === "username") {
+        setError("username", "username already in use");
+      }
+      toast.error("Profile Info Update Failed!");
+    }
   };
 
   const handleReset = () => {
     setValue("full_name", data?.full_name);
-    setValue("email", data?.email);
+    // setValue("email", data?.email);
     setValue("username", data?.username);
     setValue("phone.code", data?.phone?.code);
     setValue("phone.number", data?.phone?.number);
@@ -135,14 +150,16 @@ const AccountSetting = () => {
           <div className="account_setting_input_container">
             <label htmlFor="Email">Email</label>
             <input
-              {...register("email", {
-                required: "Email is required",
-                pattern: {
-                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                  message: "Invalid email format",
-                },
-              })}
+              // {...register("email", {
+              //   required: "Email is required",
+              //   pattern: {
+              //     value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+              //     message: "Invalid email format",
+              //   },
+              // })}
               type="email"
+              readOnly
+              value={data?.email}
               className=""
               placeholder="Please enter your email"
             />
@@ -210,7 +227,19 @@ const AccountSetting = () => {
           </div>
 
           <div className="update_profile_btns_container">
-            <button type="submit" className="update_profile_btn">
+            <button
+              type="submit"
+              className="update_profile_btn flex justify-center items-center gap-2"
+            >
+              {patchLoading && (
+                <SpinnerCircularFixed
+                  size={25}
+                  thickness={170}
+                  speed={350}
+                  color="white"
+                  secondaryColor="rgba(124, 57, 172, 0.19)"
+                />
+              )}
               Update Profile
             </button>
             <div

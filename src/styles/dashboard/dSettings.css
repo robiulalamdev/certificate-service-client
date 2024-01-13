@@ -136,7 +136,7 @@
   height: 47.275px;
   flex-shrink: 0;
   border-radius: 7.718px;
-  background: #0078ba;
+  background-color: #0078ba !important;
   color: #fff;
   font-family: Manrope;
   font-size: 17.366px;

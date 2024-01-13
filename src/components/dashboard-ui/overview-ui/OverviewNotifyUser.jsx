@@ -5,7 +5,7 @@ import { iNotify } from "../../../utiles/icons";
 
 const OverviewNotifyUser = ({ user }) => {
   const { data } = useGetNotificationsQuery();
-  console.log(data);
+  // console.log(data);
   return (
     <>
       <div className="profile_part">

@@ -89,7 +89,7 @@ const AccountSetting = () => {
     handleReset();
   }, [data]);
 
-  console.log(errors);
+  // console.log(errors);
 
   return (
     <>

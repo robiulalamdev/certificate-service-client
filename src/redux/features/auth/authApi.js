@@ -112,6 +112,16 @@ const authApi = api.injectEndpoints({
       }),
       invalidatesTags: ["users"],
     }),
+
+    // change/forgot-password step 1
+    forgotPassword: builder.mutation({
+      query: ({ data }) => ({
+        url: `/users/change/forgot-password`,
+        method: "POST",
+        body: data,
+      }),
+      invalidatesTags: ["users"],
+    }),
   }),
 });
 
@@ -129,4 +139,7 @@ export const {
   useHandleResendOtpMutation,
   useCheckEmailMutation,
   usePatchUserInfoByIdMutation,
+
+  // forgotPassword
+  useForgotPasswordMutation,
 } = authApi;

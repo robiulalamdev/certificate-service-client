@@ -17,6 +17,7 @@ import { useForm } from "react-hook-form";
 import { useAddJobMutation } from "../../redux/features/job/jobApi";
 import { toast } from "react-toastify";
 import { SpinnerCircularFixed } from "spinners-react";
+import { useNavigate } from "react-router-dom";
 
 const StartMailingForm = () => {
   const [addJob] = useAddJobMutation();
@@ -32,6 +33,8 @@ const StartMailingForm = () => {
     reset,
     formState: { errors },
   } = useForm();
+
+  const navigate = useNavigate();
 
   const [document_1, setDocument_1] = useState(null);
   const [document_2, setDocument_2] = useState(null);
@@ -88,7 +91,7 @@ const StartMailingForm = () => {
     if (result?.data?.success) {
       toast.success("Mail Send Successfully");
       reset();
-      window.location.reload();
+      navigate("/dashboard");
     } else {
       toast.error("Mail Send Failed!");
     }

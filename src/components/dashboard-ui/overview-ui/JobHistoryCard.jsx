@@ -59,7 +59,7 @@ const JobHistoryCard = ({ job }) => {
             (job?.status === "Approved" && "job_status_btn_approved")
           }`}
         >
-          Pending
+          {job?.status}
         </button>
       </div>
       <Dialog

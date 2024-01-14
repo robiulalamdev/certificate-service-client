@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import "../../styles/signup.css";
 import { iEyeHide, iEyeOpen, iSuccessReset } from "../../utiles/icons";
+import { useParams } from "react-router-dom";
 
 const ResetPassword = () => {
+  const { token } = useParams();
   const [step, setStep] = useState(1);
   const [passwordOpen, setPasswordOpen] = useState(false);
   const [confirmPasswordOpen, setConfirmPasswordOpen] = useState(false);
@@ -14,6 +16,8 @@ const ResetPassword = () => {
     formState: { errors },
   } = useForm();
   const password = watch("password", "");
+
+  console.log(token);
 
   const handlePassword = (data) => {
     setStep(step + 1);
@@ -30,7 +34,7 @@ const ResetPassword = () => {
         >
           <h1>Reset Password</h1>
           <p className="pb-4">Choose a new password for your account</p>
-          <div className="forgot_input_container position-relative">
+          <div className="forgot_input_container relative">
             <input
               {...register("password", {
                 required: "Password is required",
@@ -44,7 +48,7 @@ const ResetPassword = () => {
             />
             <div
               onClick={() => setPasswordOpen(!passwordOpen)}
-              className="position-absolute cursor-pointer"
+              className="absolute cursor-pointer"
               style={{
                 right: "15px",
                 top: "15px",
@@ -55,8 +59,13 @@ const ResetPassword = () => {
             >
               {passwordOpen ? iEyeHide : iEyeOpen}
             </div>
+            {errors?.password && (
+              <i className="text-red-600 text-sm">
+                * {errors.password.message}
+              </i>
+            )}
           </div>
-          <div className="forgot_input_container position-relative">
+          <div className="forgot_input_container relative">
             <input
               {...register("confirm_password", {
                 required: "Please confirm your password",
@@ -68,7 +77,7 @@ const ResetPassword = () => {
             />
             <div
               onClick={() => setConfirmPasswordOpen(!confirmPasswordOpen)}
-              className="position-absolute cursor-pointer"
+              className="absolute cursor-pointer"
               style={{
                 right: "15px",
                 top: "15px",
@@ -79,6 +88,11 @@ const ResetPassword = () => {
             >
               {confirmPasswordOpen ? iEyeHide : iEyeOpen}
             </div>
+            {errors?.confirm_password && (
+              <i className="text-red-600 text-sm">
+                * {errors.confirm_password.message}
+              </i>
+            )}
           </div>
           <button type="submit" className="forgot_send_btn">
             Reset Password

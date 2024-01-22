@@ -319,7 +319,7 @@ const Signup = () => {
                 <Button
                   disabled={!isFilled || isOtpLoading}
                   onClick={handleOTP}
-                  className="flex justify-center items-center shadow-none bg-primaryDark hover:bg-primaryDark text-white"
+                  className="flex justify-center items-center shadow-none !bg-primaryDark hover:!bg-primaryDark text-white border"
                 >
                   {isOtpLoading ? (
                     <Spinner color="white" />

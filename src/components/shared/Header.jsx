@@ -31,7 +31,7 @@ const Header = () => {
                 </Link>
                 <Link to="/create-account">
                   <button
-                    className="bg-primaryDark w-[150px] h-[45px] custom rounded"
+                    className="!bg-primaryDark w-[150px] h-[45px] custom rounded"
                     type="submit"
                   >
                     Create account
@@ -41,7 +41,7 @@ const Header = () => {
             )}
 
             <button
-              className="bg-primaryDark w-[150px] h-[45px] custom rounded custom"
+              className="!bg-primaryDark w-[150px] h-[45px] custom rounded"
               type="submit"
             >
               <i className="fa-regular fa-comment-dots"></i> Let’s chat

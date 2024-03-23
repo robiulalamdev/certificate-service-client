@@ -24,7 +24,32 @@ const SMFStep10 = ({
           Choose Normal service or Rush service
         </h1>
         <p className="text-[#001B33] text-xl leading-[32px] mt-[30px]">
-          Unlike other notice providers, we mail each and every business day. In
+          <p>
+            The cut off time for getting a mailing out in todays mail is noon
+            pacific standard time.
+          </p>
+          <br />
+          <p>
+            Jobs which come in after that time are slated for mailing the next
+            day. If you would like to send the job out today anyway, please
+            choose the RUSH option. However, you will be charged a RUSH PRIORITY
+            fee of .25 cents per page with NO postal or printing discounts
+            applied.
+          </p>
+
+          <br />
+          <p>
+            Any job received after 4 p.m. PST (RUSH Designation or not) will be
+            slated for delivery the next business day and revert to your normal
+            print rate.
+          </p>
+          <br />
+          <p>
+            While we make every effort to expedite same day service, we do not
+            guarantee same day mailing, but we do guarantee it will go out no
+            later than the next business day.
+          </p>
+          {/* Unlike other notice providers, we mail each and every business day. In
           order to have that level of efficiency, we need to not only print your
           documents, but also make them ready for delivery to the United States
           Post Office. Legally, the moment we have registered your envelope with
@@ -39,7 +64,7 @@ const SMFStep10 = ({
           the RUSH option. We will then jump your mailing project to the front
           of the line and make sure that we get it into the mailstream that day.
           However, we offer no postage discounts and we charge twenty five cents
-          per page to get your documents out the door on time.
+          per page to get your documents out the door on time. */}
         </p>
       </div>
 
@@ -92,7 +117,7 @@ const SMFStep10 = ({
         )}
       />
 
-      <div className="mt-[60px] text-xl leading-[32px] text-[#001B33] font-outfit">
+      {/* <div className="mt-[60px] text-xl leading-[32px] text-[#001B33] font-outfit">
         <p>
           The cut off time for getting a mailing out in todays mail is noon
           pacific standard time.
@@ -117,7 +142,7 @@ const SMFStep10 = ({
           guarantee same day mailing, but we do guarantee it will go out no
           later than the next business day.
         </p>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -40,7 +40,7 @@ const SMFStep8 = ({
         </p>
       </div>
 
-      <div className="grid grid-cols-1 gap-[50px] mt-[60px]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-[30px] gap-y-[50px] mt-[60px]">
         <SMStep8FormSection
           number="01"
           name="additional_address_1"

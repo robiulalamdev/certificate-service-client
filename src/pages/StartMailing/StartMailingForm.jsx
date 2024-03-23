@@ -49,7 +49,6 @@ const StartMailingForm = () => {
   const [ownMailingFile, setOwnMailingFile] = useState(null);
 
   const handleSave = async (data) => {
-    console.log(data);
     setIsLoading(true);
     const formData = new FormData();
 

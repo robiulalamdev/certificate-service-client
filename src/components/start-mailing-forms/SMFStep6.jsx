@@ -2,8 +2,10 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
 
+import { Tooltip } from "@material-tailwind/react";
 import { useEffect } from "react";
 import { Controller } from "react-hook-form";
+import { iInfo } from "../../utiles/icons";
 
 const SMFStep6 = ({
   register,
@@ -83,12 +85,10 @@ const SMFStep6 = ({
                           **READ THIS BEFORE ENTERING EXCLUSIONS**
                         </h1>
                         <p className="text-[#001B33] text-[21.194px] font-medium leading-[34.652px] font-outfit">
-                          Type the name of the parties you wish to exclude
-                          below. The name must MATCH EXACTLY the name found on
-                          the first line of the address block on the Master
-                          Mailing Matrix. If the match is not EXACT, no
-                          exclusion will occur. WE OFFER NO GUARANTEES THAT THE
-                          PARTIES YOU LIST WILL BE EXCLUDED.
+                          Type the name of the parties that you wish to exclude
+                          exactly as they appear on the master mailing matrix.
+                          WE OFFER NO GUARANTEES THE PARTIES YOU LIST WILL BE
+                          EXCLUDED.
                         </p>
                       </div>
                       <div className="grid grid-cols-1 gap-y-[22.63px]">
@@ -183,14 +183,23 @@ const SMFStep6 = ({
               />
               <div>
                 <h1 className="text-[#0055A3] font-semibold text-[40px] font-outfit leading-[48.2px]">
-                  Exclude the United States Bankruptcy Court
+                  Exclude the United States Bankruptcy Court{" "}
+                  <Tooltip
+                    className="bg-gray-100 text-current border max-w-[300px]"
+                    content={
+                      <>
+                        <p className="text-[#001B33] text-[15px] font-outfit leading-[24.525px] mt-[15px] max-w-[798px]">
+                          Unless your Court Clerk has explicitly told you,
+                          directly, that they want to receive documents, leave
+                          this option checked. They don't want your mail, they
+                          already received it via PACER when you uploaded it.
+                        </p>
+                      </>
+                    }
+                  >
+                    {iInfo}
+                  </Tooltip>
                 </h1>
-                <p className="text-[#001B33] text-[15px] font-outfit leading-[24.525px] mt-[15px] max-w-[798px]">
-                  Unless your Court Clerk has explicitly told you, directly,
-                  that they want to receive documents, leave this option
-                  checked. They don't want your mail, they already received it
-                  via PACER when you uploaded it.
-                </p>
               </div>
             </div>
             <div className="flex items-start gap-[3.34px] mt-[49px]">
@@ -210,15 +219,24 @@ const SMFStep6 = ({
               />
               <div>
                 <h1 className="text-[#0055A3] font-semibold text-[40px] font-outfit leading-[48.2px]">
-                  Exclude the United States Trustee
+                  Exclude the United States Trustee{" "}
+                  <Tooltip
+                    className="bg-gray-100 text-current border max-w-[300px]"
+                    content={
+                      <>
+                        <p className="text-[#001B33] text-[15px] font-outfit leading-[24.525px] mt-[15px] max-w-[798px]">
+                          Chances are, the UST received an electronic notice
+                          when you filed your pleadings on ECF. Rule 7004
+                          requires that they be served. If you do not wish to
+                          have them served by first class mail, check the box
+                          above to exclude them (not recommended). it.
+                        </p>
+                      </>
+                    }
+                  >
+                    {iInfo}
+                  </Tooltip>
                 </h1>
-                <p className="text-[#001B33] text-[15px] font-outfit leading-[24.525px] mt-[15px] max-w-[798px]">
-                  Chances are, the UST received an electronic notice when you
-                  filed your pleadings on ECF. Rule 7004 requires that they be
-                  served. If you do not wish to have them served by first class
-                  mail, check the box above to exclude them (not recommended).
-                  it.
-                </p>
               </div>
             </div>
           </>

@@ -1,3 +1,6 @@
+import { Tooltip } from "@material-tailwind/react";
+import { iInfo } from "../../utiles/icons";
+
 /* eslint-disable react/no-unescaped-entities */
 const SMFStep11 = ({
   register,
@@ -12,34 +15,44 @@ const SMFStep11 = ({
     <div className="container mx-auto">
       <div className="mt-[60px]">
         <h1 className="text-[40px] font-semibold text-[#0055A3] leading-[39px] font-outfit">
-          Do you have any custom or special work requests?
+          Do you have any custom or special work requests?{" "}
+          <Tooltip
+            className="bg-gray-100 text-current border max-w-[800px]"
+            content={
+              <>
+                <p className="text-[#001B33] text-xl leading-[32px]">
+                  If you have a request that is specific to your mailing
+                  project, such as pulling from multiple ECF sources, or placing
+                  your Chapter 11 ballot on a different colored paper, please
+                  let us know here. We will do our very best to meet your
+                  requests in a timely and efficient manner.
+                </p>
+                <br />
+                <p className="text-[#001B33] text-xl leading-[32px]">
+                  However, please understand that what you are asking is
+                  typically something different from our normal method of
+                  mailing and service. If the request you are making is outside
+                  the normal scope of our service or requires clarification, we
+                  will place your mailing job on HOLD status and contact you for
+                  further clarification.
+                </p>
+                <br />
+                <p className="text-[#001B33] text-xl leading-[32px]">
+                  Once your job has been placed on HOLD status, it is no longer
+                  scheduled for mailing service and will not be scheduled for
+                  mailing service until we have resolved the custom work and/or
+                  special request. Your prompt response is necessary in order to
+                  ensure timely mail service.
+                </p>
+              </>
+            }
+          >
+            {iInfo}
+          </Tooltip>
         </h1>
-        <p className="text-[#001B33] text-xl leading-[32px] mt-[30px]">
-          If you have a request that is specific to your mailing project, such
-          as pulling from multiple ECF sources, or placing your Chapter 11
-          ballot on a different colored paper, please let us know here. We will
-          do our very best to meet your requests in a timely and efficient
-          manner.
-        </p>
-        <br />
-        <p className="text-[#001B33] text-xl leading-[32px] mt-[30px]">
-          However, please understand that what you are asking is typically
-          something different from our normal method of mailing and service. If
-          the request you are making is outside the normal scope of our service
-          or requires clarification, we will place your mailing job on HOLD
-          status and contact you for further clarification.
-        </p>
-        <br />
-        <p className="text-[#001B33] text-xl leading-[32px] mt-[30px]">
-          Once your job has been placed on HOLD status, it is no longer
-          scheduled for mailing service and will not be scheduled for mailing
-          service until we have resolved the custom work and/or special request.
-          Your prompt response is necessary in order to ensure timely mail
-          service.
-        </p>
       </div>
 
-      <div className="mt-[80px]">
+      <div className="mt-[40px]">
         <h1 className="text-[40px] font-semibold leading-[48px] text-[#0055A3] text-center">
           Custom Work Request: (Limit 144 characters)
         </h1>

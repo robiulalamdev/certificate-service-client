@@ -108,9 +108,10 @@ const SMFStep4 = ({
               {...register(
                 "signature_block_for_certificate.attorney_ecf_signature.address",
                 {
-                  required: false,
+                  required: true,
                 }
               )}
+              required
               type="text"
               className="md:min-w-[298px] w-full"
             />

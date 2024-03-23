@@ -81,13 +81,13 @@ const SMFStep12 = ({
             HAVE PATIENCE! You are uploading a lot of information. It takes time
             to push all that through the web.
           </p>
-          <div className="flex items-center gap-[11px] mt-[16px]">
+          {/* <div className="flex items-center gap-[11px] mt-[16px]">
             <input className="size-[34px]" type="checkbox" />
             <p className="text-[#001B33] text-xl font-outfit">
               Check here to save the information in this form so you don't have
               to retype it the next time you are here.
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

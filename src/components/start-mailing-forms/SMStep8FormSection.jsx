@@ -26,13 +26,13 @@ const SMStep8FormSection = ({
   return (
     <>
       <div className="flex flex-col md:flex-row items-start gap-[19px]">
-        <h1 className="text-[50px] text-[#0055A3] font-semibold leading-[60.25px] font-outfit mt-4">
+        <h1 className="text-[22px] md:text-[35px] text-[#0055A3] font-semibold leading-[60.25px] font-outfit mt-4">
           {number}.
         </h1>
-        <div className="grid grid-cols-1 gap-[30px] flex-grow w-full">
+        <div className="grid grid-cols-1 gap-[15px] flex-grow w-full">
           <div>
             <label
-              className="text-xl font-semibold text-[#001B33] font-outfit uppercase mb-[2px]"
+              className="text-base font-semibold text-[#001B33] font-outfit uppercase mb-[2px]"
               htmlFor="Name"
             >
               Name
@@ -43,12 +43,12 @@ const SMStep8FormSection = ({
                 { required: false }
               )}
               type="text"
-              className="w-full h-[47px] bg-[#F7F7F7] outline-none border-[0.5px] border-black px-2 rounded-[5px]"
+              className="w-full h-[42px] bg-[#F7F7F7] outline-none border-[0.5px] border-black px-2 rounded-[5px]"
             />
           </div>
           <div>
             <label
-              className="text-xl font-semibold text-[#001B33] font-outfit uppercase mb-[2px]"
+              className="text-base font-semibold text-[#001B33] font-outfit uppercase mb-[2px]"
               htmlFor="Name"
             >
               Address
@@ -59,12 +59,12 @@ const SMStep8FormSection = ({
                 { required: false }
               )}
               type="text"
-              className="w-full h-[47px] bg-[#F7F7F7] outline-none border-[0.5px] border-black px-2 rounded-[5px]"
+              className="w-full h-[42px] bg-[#F7F7F7] outline-none border-[0.5px] border-black px-2 rounded-[5px]"
             />
           </div>
           <div>
             <label
-              className="text-xl font-semibold text-[#001B33] font-outfit uppercase mb-[2px]"
+              className="text-base font-semibold text-[#001B33] font-outfit uppercase mb-[2px]"
               htmlFor="Name"
             >
               Address (cont.)
@@ -75,13 +75,13 @@ const SMStep8FormSection = ({
                 { required: false }
               )}
               type="text"
-              className="w-full h-[47px] bg-[#F7F7F7] outline-none border-[0.5px] border-black px-2 rounded-[5px]"
+              className="w-full h-[42px] bg-[#F7F7F7] outline-none border-[0.5px] border-black px-2 rounded-[5px]"
             />
           </div>
-          <div className="grid grid-cols-3 gap-x-[30px]">
+          <div className="grid grid-cols-3 gap-x-[15px]">
             <div>
               <label
-                className="text-xl font-semibold text-[#001B33] font-outfit uppercase mb-[2px]"
+                className="text-base font-semibold text-[#001B33] font-outfit uppercase mb-[2px]"
                 htmlFor="Name"
               >
                 City
@@ -92,12 +92,12 @@ const SMStep8FormSection = ({
                   { required: false }
                 )}
                 type="text"
-                className="w-full h-[47px] bg-[#F7F7F7] outline-none border-[0.5px] border-black px-2 rounded-[5px]"
+                className="w-full h-[42px] bg-[#F7F7F7] outline-none border-[0.5px] border-black px-2 rounded-[5px]"
               />
             </div>
             <div>
               <label
-                className="text-xl font-semibold text-[#001B33] font-outfit uppercase mb-[2px] block"
+                className="text-base font-semibold text-[#001B33] font-outfit uppercase mb-[2px] block"
                 htmlFor="state"
               >
                 State
@@ -109,7 +109,7 @@ const SMStep8FormSection = ({
                   <Popover placement="bottom-start">
                     <PopoverHandler>
                       <Button
-                        className={`w-full h-[47px] bg-[#F7F7F7] outline-none border-[0.349px] border-black  rounded-[3.384px] px-2 shadow-none hover:shadow-none normal-case text-left font-medium text-[18px] py-0 text-black`}
+                        className={`w-full h-[42px] bg-[#F7F7F7] outline-none border-[0.349px] border-black  rounded-[3.384px] px-2 shadow-none hover:shadow-none normal-case text-left font-medium text-[18px] py-0 text-black`}
                       >
                         {watch(
                           `manual_entry_of_additional_addresses.${name}.state`
@@ -143,7 +143,7 @@ const SMStep8FormSection = ({
 
             <div>
               <label
-                className="text-xl font-semibold text-[#001B33] font-outfit uppercase mb-[2px]"
+                className="text-base font-semibold text-[#001B33] font-outfit uppercase mb-[2px]"
                 htmlFor="Name"
               >
                 ZIP
@@ -154,13 +154,13 @@ const SMStep8FormSection = ({
                   { required: false }
                 )}
                 type="text"
-                className="w-full h-[47px] bg-[#F7F7F7] outline-none border-[0.5px] border-black px-2 rounded-[5px]"
+                className="w-full h-[42px] bg-[#F7F7F7] outline-none border-[0.5px] border-black px-2 rounded-[5px]"
               />
             </div>
           </div>
           <div>
             <label
-              className="text-xl font-semibold text-[#001B33] font-outfit uppercase mb-[2px] block"
+              className="text-base font-semibold text-[#001B33] font-outfit uppercase mb-[2px] block"
               htmlFor="Name"
             >
               Country (if other than United States)
@@ -172,7 +172,7 @@ const SMStep8FormSection = ({
                 <Popover placement="bottom-start">
                   <PopoverHandler>
                     <Button
-                      className={`w-full h-[47px] bg-[#F7F7F7] outline-none border-[0.349px] border-black  rounded-[3.384px] px-2 shadow-none hover:shadow-none normal-case text-left font-medium text-[18px] py-0 text-black`}
+                      className={`w-full h-[42px] bg-[#F7F7F7] outline-none border-[0.349px] border-black  rounded-[3.384px] px-2 shadow-none hover:shadow-none normal-case text-left font-medium text-[18px] py-0 text-black`}
                     >
                       {watch(
                         `manual_entry_of_additional_addresses.${name}.country`
@@ -205,7 +205,7 @@ const SMStep8FormSection = ({
           </div>
           <div>
             <label
-              className="text-xl font-semibold text-[#001B33] font-outfit uppercase mb-[2px] block"
+              className="text-base font-semibold text-[#001B33] font-outfit uppercase mb-[2px] block"
               htmlFor="Name"
             >
               SELECT DELIVERY OPTIONS{" "}
@@ -219,7 +219,7 @@ const SMStep8FormSection = ({
                 <Popover placement="bottom-end">
                   <PopoverHandler>
                     <Button
-                      className={`w-full h-[47px] bg-[#F7F7F7] outline-none border-[0.349px] font-normal border-black  rounded-[3.384px] px-2 shadow-none hover:shadow-none normal-case text-left text-[18px] py-0 text-black`}
+                      className={`w-full h-[42px] bg-[#F7F7F7] outline-none border-[0.349px] font-normal border-black  rounded-[3.384px] px-2 shadow-none hover:shadow-none normal-case text-left text-[18px] py-0 text-black`}
                     >
                       {watch(
                         `manual_entry_of_additional_addresses.${name}.delivery_option`

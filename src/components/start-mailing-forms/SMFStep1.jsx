@@ -106,10 +106,9 @@ const SMFStep1 = ({
             <h1>JointDebtorName</h1>
             <input
               {...register("about_document.joint_debtor_name", {
-                required: true,
+                required: false,
               })}
               type="text"
-              required
             />
           </div>
         </div>
